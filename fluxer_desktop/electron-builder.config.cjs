@@ -1396,13 +1396,15 @@ module.exports = {
 		minimumSystemVersion: macOSMinimumSystemVersion,
 		icon: `build_resources/${iconDir}/_compiled/AppIcon.icns`,
 		darkModeSupport: true,
-		notarize: true,
+		// notarize: true,
+		notarize: false,
 		sign: {
+			identity: '-',
 			hardenedRuntime: true,
-			provisioningProfile,
-			entitlements: isCanary
-				? 'build_resources/entitlements.mac.canary.plist'
-				: 'build_resources/entitlements.mac.stable.plist',
+			// provisioningProfile,
+			// entitlements: isCanary
+			// 	? 'build_resources/entitlements.mac.canary.plist'
+			// 	: 'build_resources/entitlements.mac.stable.plist',
 			entitlementsInherit: 'build_resources/entitlements.mac.inherit.plist',
 		},
 		target: [

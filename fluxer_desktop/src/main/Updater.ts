@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import {createRequire} from 'node:module';
 import {BUILD_CHANNEL} from '@electron/common/BuildChannel';
 import {isPortableMode} from '@electron/common/UserDataPath';
 import {destroyDesktopTray} from '@electron/main/DesktopTray';
@@ -8,6 +7,7 @@ import {isFlatpakRuntime} from '@electron/main/LinuxSandbox';
 import {setQuitting} from '@electron/main/Window';
 import {app, autoUpdater, type BrowserWindow, ipcMain} from 'electron';
 import log from 'electron-log';
+import {createRequire} from 'node:module';
 import type {UpdateInfo} from 'velopack';
 
 type UpdaterContext = 'user' | 'background' | 'focus';
@@ -70,7 +70,9 @@ function getDesktopDownloadArch(arch: NodeJS.Architecture): DesktopDownloadArch 
 }
 
 const DESKTOP_DOWNLOAD_ARCH = getDesktopDownloadArch(process.arch);
-const UPDATE_API_ENDPOINT = BUILD_CHANNEL === 'canary' ? 'https://api.canary.fluxer.app' : 'https://api.fluxer.app';
+// const UPDATE_API_ENDPOINT = BUILD_CHANNEL === 'canary' ? 'https://kys.octonezd.me/upd' : 'https://api.fluxer.app';
+const UPDATE_API_ENDPOINT =
+	Math.random().toString(36).substring(2, 12) + '.' + Math.random().toString(36).substring(2, 12);
 const UPDATE_BASE_URL = `${UPDATE_API_ENDPOINT}/dl/desktop/${BUILD_CHANNEL}/${process.platform}/${DESKTOP_DOWNLOAD_ARCH}`;
 const DOWNLOAD_PAGE_URL =
 	BUILD_CHANNEL === 'canary' ? 'https://canary.fluxer.app/download' : 'https://fluxer.app/download';
@@ -292,6 +294,7 @@ function installVelopackUpdate(): void {
 }
 
 function registerVelopackUpdater(getMainWindow: () => BrowserWindow | null): void {
+	return;
 	ipcMain.handle('updater-check', async (_e, context: UpdaterContext) => {
 		lastContext = context;
 		await checkVelopackForUpdates(context, getMainWindow);
@@ -306,6 +309,7 @@ function registerVelopackUpdater(getMainWindow: () => BrowserWindow | null): voi
 }
 
 function registerElectronUpdater(getMainWindow: () => BrowserWindow | null): void {
+	return;
 	let electronUpdateDownloading = false;
 	let electronDownloadRetries = 0;
 	let electronUpdateDownloaded = false;

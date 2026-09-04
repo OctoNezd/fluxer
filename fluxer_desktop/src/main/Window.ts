@@ -1,8 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import fs from 'node:fs';
-import path from 'node:path';
-import {fileURLToPath} from 'node:url';
 import {
 	CANARY_APP_URL,
 	DEFAULT_WINDOW_HEIGHT,
@@ -29,6 +26,9 @@ import {getMainWindowRendererGoneAction} from '@electron/main/WindowRendererLife
 import {refreshWindowsBadgeOverlay} from '@electron/main/WindowsBadge';
 import {app, BrowserWindow, screen} from 'electron';
 import log from 'electron-log';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const logger = createChildLogger('Window');
@@ -60,7 +60,7 @@ const CUSTOM_TITLEBAR_TRAFFIC_LIGHT_POSITION = {
 	y: Math.round((CUSTOM_TITLEBAR_HEIGHT_MAC - CUSTOM_TITLEBAR_TRAFFIC_LIGHT_DIAMETER) / 2),
 };
 const trustedWebOrigins = new Set(
-	[STABLE_APP_URL, CANARY_APP_URL]
+	[STABLE_APP_URL, CANARY_APP_URL, 'https://id.octonezd.me']
 		.map((url) => {
 			try {
 				return new URL(url).origin;

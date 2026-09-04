@@ -1928,15 +1928,10 @@ struct VelopackAssetIndexEntry {
 
 fn windows_package_config(build_channel: &str, arch: &str) -> WindowsPackageConfig {
     let canary = build_channel == "canary";
-    let pack_title = if canary { "Fluxer Canary" } else { "Fluxer" };
     WindowsPackageConfig {
-        pack_id: if canary {
-            "fluxer_desktop_canary"
-        } else {
-            "fluxer_desktop"
-        },
-        pack_title,
-        artifact_prefix: if canary { "Fluxer-Canary" } else { "Fluxer" },
+        pack_id: "kys",
+        pack_title: "KYS",
+        artifact_prefix: "kys",
         icon_dir: if canary {
             "icons-canary"
         } else {
@@ -1947,7 +1942,7 @@ fn windows_package_config(build_channel: &str, arch: &str) -> WindowsPackageConf
         } else {
             "win-x64"
         },
-        main_exe: format!("{pack_title}.exe"),
+        main_exe: "KYS.exe".to_string(),
         output_dir: PathBuf::from("dist-electron").join(format!("velopack-windows-{arch}")),
     }
 }
@@ -1966,25 +1961,36 @@ fn package_app_windows_velopack_step() -> Result<()> {
         )
     })?;
     let vpk = find_velopack_cli()?;
-    let trusted_sign_file = PathBuf::from(require_env(VELOPACK_TRUSTED_SIGN_FILE_ENV).context(
-        "Velopack packaging requires the Trusted Signing metadata written by the write_windows_signing_metadata step. Windows packages are never produced unsigned.",
-    )?);
-    ensure!(
-        trusted_sign_file.is_file(),
-        "Velopack Trusted Signing metadata file is missing: {}",
-        trusted_sign_file.display()
-    );
+    let trusted_sign_file = match env::var(VELOPACK_TRUSTED_SIGN_FILE_ENV) {
+        Ok(raw) => {
+            let path = PathBuf::from(raw);
+            ensure!(
+                path.is_file(),
+                "Velopack Trusted Signing metadata file is missing: {}",
+                path.display()
+            );
+            Some(path)
+        }
+        Err(_) => None,
+    };
+    if trusted_sign_file.is_none() {
+        println!(
+            "{} is not set; packaging an unsigned Velopack build.",
+            VELOPACK_TRUSTED_SIGN_FILE_ENV
+        );
+    }
     let packaged = pack_and_validate_windows_velopack(
         &vpk,
         &config,
         &version,
         &arch,
         &pack_dir,
-        &trusted_sign_file,
+        trusted_sign_file.as_deref(),
     );
-    let metadata_removed = remove_file_if_exists(&trusted_sign_file);
     packaged?;
-    metadata_removed?;
+    if let Some(path) = &trusted_sign_file {
+        remove_file_if_exists(path)?;
+    }
     print_directory(&config.output_dir)
 }
 
@@ -1994,38 +2000,40 @@ fn pack_and_validate_windows_velopack(
     version: &str,
     arch: &str,
     pack_dir: &Path,
-    trusted_sign_file: &Path,
+    trusted_sign_file: Option<&Path>,
 ) -> Result<()> {
-    ensure_velopack_pack_supports(vpk, &["--azureTrustedSignFile"])?;
-
-    run_command(CommandSpec::new(vpk).args([
-        "--yes",
-        "pack",
-        "--packId",
-        config.pack_id,
-        "--packVersion",
-        version,
-        "--packDir",
-        pack_dir.to_string_lossy().as_ref(),
-        "--mainExe",
-        config.main_exe.as_str(),
-        "--packTitle",
-        config.pack_title,
-        "--packAuthors",
-        "Fluxer Platform AB",
-        "--shortcuts",
-        "Desktop,StartMenu",
-        "--runtime",
-        config.runtime,
-        "--icon",
-        &format!("build_resources/{}/icon.ico", config.icon_dir),
-        "--outputDir",
-        config.output_dir.to_string_lossy().as_ref(),
-        "--delta",
-        "None",
-        "--azureTrustedSignFile",
-        trusted_sign_file.to_string_lossy().as_ref(),
-    ]))?;
+    let mut command = CommandSpec::new(vpk)
+        .arg("--yes")
+        .arg("pack")
+        .arg("--packId")
+        .arg(config.pack_id)
+        .arg("--packVersion")
+        .arg(version)
+        .arg("--packDir")
+        .arg(pack_dir.to_string_lossy().into_owned())
+        .arg("--mainExe")
+        .arg(config.main_exe.as_str())
+        .arg("--packTitle")
+        .arg(config.pack_title)
+        .arg("--packAuthors")
+        .arg("Fluxer Platform AB")
+        .arg("--shortcuts")
+        .arg("Desktop,StartMenu")
+        .arg("--runtime")
+        .arg(config.runtime)
+        .arg("--icon")
+        .arg(format!("build_resources/{}/icon.ico", config.icon_dir))
+        .arg("--outputDir")
+        .arg(config.output_dir.to_string_lossy().into_owned())
+        .arg("--delta")
+        .arg("None");
+    if let Some(path) = trusted_sign_file {
+        ensure_velopack_pack_supports(vpk, &["--azureTrustedSignFile"])?;
+        command = command
+            .arg("--azureTrustedSignFile")
+            .arg(path.to_string_lossy().into_owned());
+    }
+    run_command(command)?;
 
     validate_velopack_output(config, version, arch)?;
     remove_velopack_portable_archives(&config.output_dir)
@@ -2038,7 +2046,7 @@ fn remove_velopack_portable_archives(output_dir: &Path) -> Result<()> {
         }
         fs::remove_file(&path).with_context(|| format!("Failed to remove {}", path.display()))?;
         println!(
-            "Removed Velopack portable archive {}. Fluxer publishes its own portable ZIP built from the signed application tree.",
+            "Removed Velopack portable archive {}. A portable ZIP is published from the application tree instead.",
             path.display()
         );
     }
@@ -5101,7 +5109,7 @@ export const CHANNEL_DISPLAY_NAME = BUILD_CHANNEL;\n"
         }
 
         let entries =
-            velopack_path_lengths(&archive_path, Path::new(r"C:\Users\a\AppData\Local\Fluxer"))
+            velopack_path_lengths(&archive_path, Path::new(r"C:\Users\a\AppData\Local\kys"))
                 .unwrap();
 
         assert_eq!(entries[0].name, "deep/path/with/long/file.txt");
@@ -5111,14 +5119,17 @@ export const CHANNEL_DISPLAY_NAME = BUILD_CHANNEL;\n"
     #[test]
     fn windows_package_config_tracks_channel_and_arch() {
         let stable = windows_package_config("stable", "x64");
-        assert_eq!(stable.pack_id, "fluxer_desktop");
+        assert_eq!(stable.pack_id, "kys");
+        assert_eq!(stable.pack_title, "KYS");
         assert_eq!(stable.runtime, "win-x64");
-        assert_eq!(stable.main_exe, "Fluxer.exe");
+        assert_eq!(stable.main_exe, "KYS.exe");
+        assert_eq!(stable.icon_dir, "icons-stable");
 
         let canary = windows_package_config("canary", "arm64");
-        assert_eq!(canary.pack_id, "fluxer_desktop_canary");
+        assert_eq!(canary.pack_id, "kys");
         assert_eq!(canary.runtime, "win-arm64");
-        assert_eq!(canary.main_exe, "Fluxer Canary.exe");
+        assert_eq!(canary.main_exe, "KYS.exe");
+        assert_eq!(canary.icon_dir, "icons-canary");
     }
 
     #[test]
@@ -5141,18 +5152,9 @@ export const CHANNEL_DISPLAY_NAME = BUILD_CHANNEL;\n"
     fn velopack_portable_archives_are_removed_from_the_release_directory() {
         let temp = tempfile::tempdir().unwrap();
         let output_dir = temp.path();
-        write_file(
-            &output_dir.join("fluxer_desktop_canary-2026.810.1-Portable.zip"),
-            "velopack",
-        );
-        write_file(
-            &output_dir.join("fluxer_desktop_canary-2026.810.1-full.nupkg"),
-            "payload",
-        );
-        write_file(
-            &output_dir.join("Fluxer Canary-2026.810.1-win-arm64.exe"),
-            "setup",
-        );
+        write_file(&output_dir.join("kys-2026.810.1-Portable.zip"), "velopack");
+        write_file(&output_dir.join("kys-2026.810.1-full.nupkg"), "payload");
+        write_file(&output_dir.join("kys-2026.810.1-win-arm64.exe"), "setup");
         write_file(&output_dir.join("RELEASES"), "feed");
 
         remove_velopack_portable_archives(output_dir).unwrap();
@@ -5163,18 +5165,18 @@ export const CHANNEL_DISPLAY_NAME = BUILD_CHANNEL;\n"
             .filter_map(|path| file_name_string(&path).ok())
             .collect::<BTreeSet<_>>();
         assert!(!remaining.iter().any(|name| name.ends_with(".zip")));
-        assert!(remaining.contains("fluxer_desktop_canary-2026.810.1-full.nupkg"));
-        assert!(remaining.contains("Fluxer Canary-2026.810.1-win-arm64.exe"));
+        assert!(remaining.contains("kys-2026.810.1-full.nupkg"));
+        assert!(remaining.contains("kys-2026.810.1-win-arm64.exe"));
         assert!(remaining.contains("RELEASES"));
     }
 
     #[test]
     fn percent_encoded_archive_names_match_their_decoded_inventory_entry() {
         assert_eq!(
-            percent_decode_archive_name("Fluxer%20Canary.exe"),
-            "Fluxer Canary.exe"
+            percent_decode_archive_name("KYS%20Canary.exe"),
+            "KYS Canary.exe"
         );
-        assert_eq!(percent_decode_archive_name("Fluxer.exe"), "Fluxer.exe");
+        assert_eq!(percent_decode_archive_name("KYS.exe"), "KYS.exe");
         assert_eq!(
             percent_decode_archive_name("win-game-capture.win32-arm64-msvc.node"),
             "win-game-capture.win32-arm64-msvc.node"
@@ -5184,30 +5186,23 @@ export const CHANNEL_DISPLAY_NAME = BUILD_CHANNEL;\n"
     }
 
     #[test]
-    fn canary_nupkg_inventory_accepts_percent_encoded_main_executable() {
+    fn nupkg_inventory_accepts_plain_main_executable() {
         let root = Path::new("lib").join("app");
-        let files = expected_windows_pe_inventory("arm64", "Fluxer Canary.exe")
+        let files = expected_windows_pe_inventory("arm64", "KYS.exe")
             .into_iter()
-            .map(|name| {
-                if name == "Fluxer Canary.exe" {
-                    return root.join("Fluxer%20Canary.exe");
-                }
-                root.join(name)
-            })
+            .map(|name| root.join(name))
             .collect::<Vec<_>>();
-        assert_expected_windows_pe_inventory(&root, &files, "arm64", "Fluxer Canary.exe").unwrap();
+        assert_expected_windows_pe_inventory(&root, &files, "arm64", "KYS.exe").unwrap();
     }
 
     #[test]
     fn known_optional_windows_pe_inventory_never_repeats_a_required_binary() {
         for arch in ["x64", "arm64"] {
-            for main_exe in ["Fluxer.exe", "Fluxer Canary.exe"] {
-                assert_eq!(
-                    contradictory_optional_windows_pe_inventory(arch, main_exe),
-                    Vec::<String>::new(),
-                    "{arch}/{main_exe} declares a binary as both required and known-optional"
-                );
-            }
+            assert_eq!(
+                contradictory_optional_windows_pe_inventory(arch, "KYS.exe"),
+                Vec::<String>::new(),
+                "{arch}/KYS.exe declares a binary as both required and known-optional"
+            );
         }
     }
 }

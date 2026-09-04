@@ -409,3 +409,10 @@ jobs:
         run: >-
           cargo run --locked --quiet --manifest-path ${{ github.workspace }}/_ci/tools/ci/Cargo.toml -- build-desktop
           --step generate_checksums_windows
+
+      - name: Upload desktop artifacts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fluxer-desktop-${{ needs.meta.outputs.build_channel }}-${{ needs.meta.outputs.version }}-${{ matrix.platform }}-${{ matrix.arch }}-${{ matrix.desktop_variant }}
+          path: upload_staging
+          if-no-files-found: error

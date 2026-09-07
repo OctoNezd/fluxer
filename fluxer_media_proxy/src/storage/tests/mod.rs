@@ -31,6 +31,7 @@ fn test_config(root: &Path) -> Config {
         bind_host: "127.0.0.1".to_owned(),
         port: 0,
         secret_key: SecretString::new("secret".to_owned()),
+        public_endpoint: None,
         mode: DeploymentMode::Mp,
         read_only: false,
         shutdown_grace_ms: 0,
@@ -67,7 +68,6 @@ fn test_config(root: &Path) -> Config {
         upload_relay: UploadRelayConfig {
             secret: SecretBytes::new(Vec::new()),
             max_body_bytes: 1024,
-            token_ttl_secs: 3600,
             s3_timeout_ms: 1000,
             buffered_retry_max_bytes: 0,
             buffered_retry_total_bytes: 0,

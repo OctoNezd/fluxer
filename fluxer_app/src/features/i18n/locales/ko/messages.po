@@ -25,7 +25,7 @@ msgid "(edited)"
 msgstr "(수정됨)"
 
 #. Error message in the messaging emoji renderer.
-#: src/features/messaging/components/markdown/renderers/EmojiRenderer.tsx:30
+#: src/features/messaging/components/markdown/renderers/EmojiRenderer.tsx:29
 msgid "(failed to load)"
 msgstr "(불러오기 실패)"
 
@@ -399,8 +399,8 @@ msgstr "{count, plural, one {#명} other {#명}}"
 msgid "{count, plural, one {# mutual community} other {# mutual communities}}"
 msgstr "{count, plural, one {#개의 공통 커뮤니티} other {#개의 공통 커뮤니티}}"
 
-#: src/features/messaging/utils/MessageReactionUtils.ts:54
-#: src/features/messaging/utils/ReactionUtils.ts:55
+#: src/features/messaging/utils/MessageReactionUtils.ts:53
+#: src/features/messaging/utils/ReactionUtils.ts:54
 msgid "{count, plural, one {# other} other {# others}}"
 msgstr "{count, plural, one {#명 외} other {#명 외}}"
 
@@ -413,7 +413,7 @@ msgid "{count, plural, one {# potential spammer message} other {# potential spam
 msgstr "{count, plural, one {#개의 스팸 의심 메시지} other {#개의 스팸 의심 메시지}}"
 
 #: src/features/app/components/shared/MessageReactionsContent.tsx:56
-#: src/features/channel/components/MessageReactions.tsx:149
+#: src/features/channel/components/MessageReactions.tsx:145
 msgid "{count, plural, one {# reaction} other {# reactions}}"
 msgstr "{count, plural, one {#개 반응} other {#개 반응}}"
 
@@ -744,11 +744,11 @@ msgid "{fps} FPS"
 msgstr "{fps} FPS"
 
 #. Short label in the app layout channel list content. Preserve {guildName}; it is inserted by code.
-#: src/features/app/components/layout/ChannelListContent.tsx:83
+#: src/features/app/components/layout/ChannelListContent.tsx:84
 msgid "{guildName} channels"
 msgstr "{guildName} 채널"
 
-#: src/features/ui/action_menu/items/VoiceParticipantMenuData.tsx:673
+#: src/features/ui/action_menu/items/VoiceParticipantMenuData.tsx:674
 msgid "{hiddenConnectionCount, plural, one {Expand # other device} other {Expand # other devices}}"
 msgstr "{hiddenConnectionCount, plural, one {#개의 다른 기기 확장} other {#개의 다른 기기 확장}}"
 
@@ -802,8 +802,8 @@ msgstr "{label} 파일이 너무 큽니다. {maxSizeLabel}보다 작은 파일�
 msgid "{label} images cannot be animated. Use a static image."
 msgstr "{label} 이미지는 애니메이션을 사용할 수 없습니다. 정지된 이미지를 사용하세요."
 
-#. Summary label in the Linux audio source picker when N apps are included. {length} is the integer app count.
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:35
+#. Screen-share audio summary listing how many apps are captured. {length} is the integer app count.
+#: src/features/voice/utils/ScreenShareAudioSummary.ts:28
 msgid "{length} apps"
 msgstr "앱 {length}개"
 
@@ -866,7 +866,7 @@ msgid "{memberCount} {rawMemberCount, plural, one {member} other {members}}"
 msgstr "{memberCount} {rawMemberCount, plural, one {명} other {명}}"
 
 #. Generic aria-label for an unread-mentions badge. Preserve {mentionCount}.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:799
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:795
 msgid "{mentionCount} mentions"
 msgstr "언급 {mentionCount}개"
 
@@ -951,7 +951,7 @@ msgid "{pixPaymentMethod} can skip the card verification step when {paymentProvi
 msgstr "{pixPaymentMethod}을(를) 사용하면 {paymentProviderName}에서 정기 {pixPaymentMethod2}를 제공하는 경우 카드 인증 단계를 건너뛸 수 있습니다."
 
 #. Badge label with a date in the user profile badges popout. Preserve {premiumProductFullName}, {premiumSinceFormatted}; they are inserted by code. In English, keep "subscriber since" lowercase. Other locales should use natural local capitalization.
-#: src/features/user/components/popouts/UserProfileBadges.tsx:56
+#: src/features/user/components/popouts/UserProfileBadges.tsx:51
 msgid "{premiumProductFullName} subscriber since {premiumSinceFormatted}"
 msgstr "{premiumProductFullName} 구독 시작일: {premiumSinceFormatted}"
 
@@ -1023,7 +1023,7 @@ msgid "{productName} avoids sending push notifications to your mobile devices wh
 msgstr "{productName}은 사용자가 컴퓨터를 사용하는 동안에는 모바일 기기로 푸시 알림을 보내지 않도록 합니다. 데스크톱에서 푸시 알림을 받기 전에 얼마나 오랫동안 비활성 상태를 유지해야 하는지 선택하세요."
 
 #. Short badge title in the user profile badges popout. Preserve {productName}; it is inserted by code. English locales use Title Case for official badge titles; other locales should use natural local capitalization.
-#: src/features/user/components/popouts/UserProfileBadges.tsx:41
+#: src/features/user/components/popouts/UserProfileBadges.tsx:36
 msgid "{productName} Bug Hunter"
 msgstr "{productName} 버그 헌터"
 
@@ -1055,11 +1055,6 @@ msgstr "{productName}에서 이 앱의 오디오에 대한 안전한 격리 경�
 #: src/features/voice/utils/ScreenShareCodecPolicy.ts:36
 msgid "{productName} cannot use a hardware encoder for this, so it will use your CPU."
 msgstr "{productName}은 하드웨어 인코더를 사용할 수 없으므로 CPU를 사용합니다."
-
-#. Short badge title in the user profile badges popout. Preserve {productName}; it is inserted by code. English locales use Title Case for official badge titles; other locales should use natural local capitalization.
-#: src/features/user/components/popouts/UserProfileBadges.tsx:31
-msgid "{productName} Community Team"
-msgstr "{productName} 커뮤니티 팀"
 
 #. Modal body shown when a user-initiated update check fails. productName is the app name.
 #: src/features/updater/commands/UpdaterModalCommands.tsx:108
@@ -1127,7 +1122,7 @@ msgid "{productName} needs screen recording access. Allow screen recording in yo
 msgstr "{productName}에 화면 녹화 접근 권한이 필요합니다. 운영체제 개인 정보 설정에서 화면 녹화를 허용하고 앱을 다시 시작하세요."
 
 #. Short badge title in the user profile badges popout. Preserve {productName}; it is inserted by code. English locales use Title Case for official badge titles; other locales should use natural local capitalization.
-#: src/features/user/components/popouts/UserProfileBadges.tsx:36
+#: src/features/user/components/popouts/UserProfileBadges.tsx:31
 msgid "{productName} Partner"
 msgstr "{productName} 파트너"
 
@@ -1162,12 +1157,12 @@ msgid "{productName} uses push notifications when installed as a mobile PWA. Reg
 msgstr "{productName}은(는) 모바일 PWA로 설치된 경우 푸시 알림을 사용합니다. 등록하면 앱이 백그라운드에 있을 때도 게이트웨이가 기기에 연결할 수 있습니다."
 
 #. Short badge title in the user profile badges popout. Preserve {productName}; it is inserted by code. English locales use Title Case for official badge titles; other locales should use natural local capitalization.
-#: src/features/user/components/popouts/UserProfileBadges.tsx:51
+#: src/features/user/components/popouts/UserProfileBadges.tsx:46
 msgid "{productName} Visionary"
 msgstr "{productName} 비저너리"
 
 #. Badge title with a date in the user profile badges popout. Preserve {productName}, {premiumSinceFormatted}; they are inserted by code. English locales use Title Case for the badge title part; other locales should use natural local capitalization.
-#: src/features/user/components/popouts/UserProfileBadges.tsx:46
+#: src/features/user/components/popouts/UserProfileBadges.tsx:41
 msgid "{productName} Visionary since {premiumSinceFormatted}"
 msgstr "{productName} 비저너리 (가입일: {premiumSinceFormatted})"
 
@@ -1678,7 +1673,7 @@ msgstr "12개월 (1년)"
 #. Short label in the language tab. Keep it concise.
 #: src/features/user/components/modals/tabs/LanguageTab.tsx:51
 msgid "12-hour"
-msgstr "12-hour"
+msgstr "12시간제"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/user/components/settings_utils/section_registry/VoiceVideoSections.ts:241
@@ -1686,7 +1681,7 @@ msgid "1440p"
 msgstr "1440p"
 
 #. Frame rate option label in the stream settings menu. FPS is a technical token.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:104
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:109
 msgid "15 FPS"
 msgstr "15 FPS"
 
@@ -1721,7 +1716,7 @@ msgstr "2~32자, 문자, 숫자, 밑줄."
 #. Short label in the language tab. Keep it concise.
 #: src/features/user/components/modals/tabs/LanguageTab.tsx:55
 msgid "24-hour"
-msgstr "24-hour"
+msgstr "24시간제"
 
 #. Invite max-uses dropdown option for 25 uses.
 #: src/features/invite/components/modals/InviteModal.tsx:72
@@ -1761,7 +1756,7 @@ msgid "3 months"
 msgstr "3개월"
 
 #. Frame rate option label in the stream settings menu. FPS is a technical token.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:108
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:113
 msgid "30 FPS"
 msgstr "30 FPS"
 
@@ -1820,7 +1815,7 @@ msgid "6-digit code"
 msgstr "6자리 코드"
 
 #. Frame rate option label in the stream settings menu. FPS is a technical token.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:112
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:117
 msgid "60 FPS"
 msgstr "60 FPS"
 
@@ -1835,7 +1830,7 @@ msgid "7 days"
 msgstr "7일"
 
 #. Required-action error when the API requires a captcha for phone verification.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:426
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:560
 msgid "A browser check is required before phone verification. Try again from the sign-in page or contact support."
 msgstr "전화번호 인증 전에 브라우저 확인이 필요합니다. 로그인 페이지에서 다시 시도하거나 고객 지원팀에 문의하세요."
 
@@ -2093,7 +2088,7 @@ msgid "Account data"
 msgstr "계정 데이터"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:279
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:253
 msgid "Account exists to spam, scam, or abuse the platform."
 msgstr "스팸, 사기 또는 플랫폼 악용을 목적으로 생성된 계정입니다."
 
@@ -2115,7 +2110,7 @@ msgstr "계정 생성일이 너무 짧음"
 #. Required-action modal title shown when an account-level verification step is required to proceed.
 #. Title of the error modal shown when an unclaimed (guest) account tries to accept a community or group DM invite. Auth-related; keep tone plain.
 #: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:8
-#: src/features/invite/commands/InviteCommands.tsx:35
+#: src/features/invite/commands/InviteCommands.tsx:34
 msgid "Account verification required"
 msgstr "계정 인증 필요"
 
@@ -2227,7 +2222,7 @@ msgstr "월간 구독 중 (취소 예정)"
 #. Short label in the appearance tab. Keep it concise.
 #. Short label in the inline. Keep it concise.
 #. Status label indicating a user is currently active.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:743
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:739
 #: src/features/user/components/modals/tabs/appearance_tab/AppearanceTabInline.tsx:43
 #: src/features/user/components/modals/tabs/AppearanceTab.tsx:51
 #: src/features/user/components/settings_utils/section_registry/AppearanceSections.ts:430
@@ -2359,7 +2354,7 @@ msgid "Add a word…"
 msgstr "단어 추가…"
 
 #. Required-action modal carousel step title for replacing a bounced email address.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:268
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:367
 msgid "Add a working email"
 msgstr "사용 가능한 이메일 추가"
 
@@ -2391,7 +2386,7 @@ msgid "Add an account to continue."
 msgstr "계정을 추가하여 계속하세요."
 
 #. Body of the error modal shown when an unclaimed (guest) account tries to accept a community invite. Tells the user to complete sign-up first.
-#: src/features/invite/commands/InviteCommands.tsx:40
+#: src/features/invite/commands/InviteCommands.tsx:39
 msgid "Add an email and password to your account first."
 msgstr "먼저 계정에 이메일과 비밀번호를 추가하세요."
 
@@ -2700,13 +2695,8 @@ msgstr "추가 인증 필요"
 msgid "Address"
 msgstr "주소"
 
-#. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:147
-msgid "Adds a manual audio source picker to the stream settings menu. Without it, a shared window already captures that app and a shared screen captures your desktop."
-msgstr "수동 오디오 소스 선택기를 스트림 설정 메뉴에 추가합니다. 이 기능이 없으면 공유된 창이 해당 앱을 이미 캡처하고 공유된 화면이 데스크톱을 캡처합니다."
-
 #. Description for an H.264 backup stream select. Keep H.264, CPU, and GPU literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:127
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:124
 msgid "Adds H.264 for mixed clients. Uses more encode work."
 msgstr "혼합 클라이언트를 위해 H.264를 추가합니다. 더 많은 인코딩 작업이 필요합니다."
 
@@ -2990,8 +2980,8 @@ msgstr "전체 프로필을 볼 수 있는 모든 사람이 내 프로필 현지
 
 #. Settings search entry label for the AV1 screen-share opt-in. AV1 is a codec name and should stay literal.
 #. Switch label for the AV1 screen-share opt-in. AV1 is a codec name and should stay literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:186
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:90
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:183
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:88
 msgid "Allow AV1 for screen sharing"
 msgstr "화면 공유에 AV1 사용 허용"
 
@@ -3044,8 +3034,8 @@ msgstr "모든 커뮤니티 허용"
 
 #. Settings search entry label for the H.265/HEVC screen-share opt-in. H.265 and HEVC are codec names and should stay literal.
 #. Switch label for the H.265/HEVC screen-share opt-in. H.265 and HEVC are codec names and should stay literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:190
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:94
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:187
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:92
 msgid "Allow H.265 (HEVC) for screen sharing"
 msgstr "H.265(HEVC) 화면 공유 허용"
 
@@ -3363,7 +3353,7 @@ msgid "Animated avatars ({animatedAvatarFormats}) require {premiumProductName}."
 msgstr "애니메이션 아바타({animatedAvatarFormats})는 {premiumProductName}이 필요합니다."
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:75
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:71
 msgid "Animated avatars & profile banners"
 msgstr "움직이는 아바타 및 프로필 배너"
 
@@ -3561,7 +3551,7 @@ msgid "Another checkbox"
 msgstr "다른 체크박스"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:383
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:357
 msgid "Another clear rule violation"
 msgstr "명백한 규칙 위반"
 
@@ -3664,7 +3654,7 @@ msgid "App state"
 msgstr "앱 상태"
 
 #. Fallback label for an app window card in the screen-share picker when the OS does not give us a window title.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:137
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:141
 msgid "App window"
 msgstr "앱 창"
 
@@ -3674,7 +3664,7 @@ msgid "App zoom"
 msgstr "앱 화면 확대/축소"
 
 #. Setting label for the global UI zoom level.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:775
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:771
 msgid "App zoom level"
 msgstr "앱 확대/축소 수준"
 
@@ -3704,11 +3694,6 @@ msgstr "메시지에 ┬─┬ ノ( ゜-゜ノ)를 추가합니다."
 #: src/features/user/components/modals/tabs/AuthorizedAppsTab.tsx:70
 msgid "Application access revoked"
 msgstr "애플리케이션 액세스 권한이 해지되었습니다"
-
-#. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:131
-msgid "Application audio"
-msgstr "애플리케이션 오디오"
 
 #. Settings content title shown while a developer application detail page is loading.
 #. Settings content title shown while a developer application detail page is loading.
@@ -3762,7 +3747,7 @@ msgstr "신청이 성공적으로 업데이트되었습니다"
 #: src/features/user/components/settings_utils/search_index/SharedDescriptors.ts:29
 #: src/features/user/components/settings_utils/section_registry/GeneralSettingsSections.ts:66
 #: src/features/user/components/settings_utils/SettingsConstants.tsx:65
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:179
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:183
 msgid "Applications"
 msgstr "앱"
 
@@ -4083,12 +4068,12 @@ msgid "Audio boost"
 msgstr "오디오 부스트"
 
 #. Section header in the stream settings menu. Selects the audio capture device for the share.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:128
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:133
 msgid "Audio device"
 msgstr "오디오 장치"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:18
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:16
 msgid "Audio device alerts"
 msgstr "오디오 장치 알림"
 
@@ -4103,7 +4088,7 @@ msgid "Audio level"
 msgstr "오디오 레벨"
 
 #. Footer summary status shown when capture-device audio is disabled.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:248
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:252
 msgid "Audio muted"
 msgstr "오디오 음소거됨"
 
@@ -4178,7 +4163,7 @@ msgid "Audio send:"
 msgstr "오디오 전송:"
 
 #. Section header in the stream settings menu grouping audio-related toggles.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:140
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:145
 msgid "Audio settings"
 msgstr "오디오 설정"
 
@@ -4188,13 +4173,8 @@ msgctxt "voice-control-button"
 msgid "Audio settings"
 msgstr "오디오 설정"
 
-#. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:135
-msgid "Audio sources"
-msgstr "오디오 소스"
-
 #. Toggle / summary row label in the Linux audio source picker. {summaryLabel} is one of the audio-source summary labels.
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:54
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:43
 msgid "Audio sources: {summaryLabel}"
 msgstr "오디오 소스: {summaryLabel}"
 
@@ -4399,9 +4379,9 @@ msgstr "자동 완성 제안: {label}, {resultCount}개 중 {selectedOptionPosit
 #. Voice region option label in the voice settings menu meaning let Fluxer pick the best region automatically.
 #. Voice region picker option label meaning 'let Fluxer pick the best region automatically'.
 #: src/features/channel/components/modals/channel_tabs/channel_overview_tab/RtcRegionSelect.tsx:19
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:67
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:107
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:147
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:64
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:104
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:144
 #: src/features/user/components/settings_utils/section_registry/NotificationsSections.ts:263
 #: src/features/voice/components/VoiceRegionSelector.tsx:16
 #: src/features/voice/components/VoiceSettingsMenus.tsx:91
@@ -4415,13 +4395,13 @@ msgid "Automatic"
 msgstr "자동"
 
 #. Option label for the screen-share codec select. codec is the automatically selected codec label.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:172
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:169
 msgid "Automatic ({codec})"
 msgstr "자동 ({codec})"
 
 #. Settings search entry label. Names the settings search entry in the settings UI.
 #. Voice setting label for automatically evening out microphone volume.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:50
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:48
 #: src/features/voice/utils/VoiceMessageDescriptors.ts:213
 msgid "Automatic gain control"
 msgstr "자동 게인 제어"
@@ -4510,12 +4490,12 @@ msgid "Autoscrolling"
 msgstr "자동 스크롤"
 
 #. Settings search synonym. Codec name; keep literal. Used to match this term in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:103
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:101
 msgid "AV1"
 msgstr "AV1"
 
 #. Option label for the screen-share codec select while the AV1 opt-in is off and the option is disabled. AV1 is a codec name and should stay literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:176
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:173
 msgid "AV1 (requires opt-in)"
 msgstr "AV1 (옵트인 필요)"
 
@@ -4603,7 +4583,7 @@ msgstr "지금은 부재중"
 #: src/features/guild/components/modals/add_guild_modal/TemplateImportForm.tsx:354
 #: src/features/guild/components/modals/add_guild_modal/TemplateImportForm.tsx:375
 #: src/features/guild/components/modals/add_guild_modal/TemplateImportForm.tsx:395
-#: src/features/moderation/components/report_modal/IARModal.tsx:89
+#: src/features/moderation/components/report_modal/IARModal.tsx:86
 #: src/features/moderation/components/report/ReportStepDetails.tsx:312
 #: src/features/user/components/modals/PhoneAddModal.tsx:411
 #: src/features/user/components/modals/PhoneAddModal.tsx:430
@@ -4746,13 +4726,13 @@ msgid "Badge"
 msgstr "뱃지"
 
 #. Option label for a software encoder quality select.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:91
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:88
 msgid "Balanced"
 msgstr "균형"
 
 #. IAR modal: quick-action card button label for opening the ban dialog.
 #. Short moderation action label. Ban a member from a community by removing them and preventing rejoining.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:155
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:129
 #: src/features/moderation/utils/ModerationMessageDescriptors.ts:5
 msgid "Ban"
 msgstr "차단"
@@ -4798,7 +4778,7 @@ msgid "Ban members"
 msgstr "멤버 차단"
 
 #. IAR modal: quick-action card title for banning the reported user (moderator-only).
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:147
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:121
 msgid "Ban this user"
 msgstr "이 사용자 차단"
 
@@ -4808,7 +4788,7 @@ msgid "Bandwidth"
 msgstr "대역폭"
 
 #. IAR modal: disabled-state label on the ban card after the user is banned from this community.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:159
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:133
 msgid "Banned"
 msgstr "차단됨"
 
@@ -4964,7 +4944,7 @@ msgid "Biometrics"
 msgstr "생체 인식"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:196
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:169
 msgid "Bitrate"
 msgstr "비트 전송률"
 
@@ -5023,7 +5003,7 @@ msgid "Block spoiler"
 msgstr "스포일러 차단"
 
 #. IAR modal: quick-action card title.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:407
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:381
 msgid "Block this user"
 msgstr "이 사용자 차단"
 
@@ -5126,7 +5106,7 @@ msgid "Bookmark messages to save them for later."
 msgstr "나중에 다시 보고 싶은 메시지는 북마크에 저장하세요."
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:51
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:47
 msgid "Bookmarked messages"
 msgstr "북마크 메시지"
 
@@ -5316,7 +5296,7 @@ msgid "Browser locale: {format}"
 msgstr "브라우저 로캘: {format}"
 
 #. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:66
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:64
 msgid "Browser mic gain for custom processing"
 msgstr "맞춤 처리를 위한 브라우저 마이크 게인"
 
@@ -5391,12 +5371,12 @@ msgid "Bulk delete"
 msgstr "일괄 삭제"
 
 #. IAR modal: rule description for a message report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:171
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:145
 msgid "Bullying, repeated unwanted contact, stalking, or targeted abuse."
 msgstr "괴롭힘, 반복적인 원치 않는 연락, 스토킹 또는 표적 학대."
 
 #. IAR modal: rule-category description for the targeted-harm group.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:62
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:44
 msgid "Bullying, threats, hate, violence, raids, or content that pushes self-harm."
 msgstr "괴롭힘, 협박, 혐오, 폭력, 레이드 또는 자해를 조장하는 콘텐츠."
 
@@ -5484,7 +5464,7 @@ msgid "Call"
 msgstr "통화"
 
 #. IAR modal: quick-action card title.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:459
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:433
 msgid "Call & group chat settings"
 msgstr "통화 및 그룹 채팅 설정"
 
@@ -5532,7 +5512,7 @@ msgstr "통화"
 #. Generic voice/video setting label for the active camera device.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #. Short label in the video tab. Keep it concise.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:719
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:715
 #: src/features/user/components/modals/tabs/UserVideoTab.tsx:68
 #: src/features/user/components/settings_utils/section_registry/VoiceVideoSections.ts:157
 #: src/features/voice/utils/SettingsDeviceOptions.ts:23
@@ -5541,12 +5521,12 @@ msgid "Camera"
 msgstr "카메라"
 
 #. Title shown in the screen-share Devices tab before camera preview permission is granted.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:151
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:155
 msgid "Camera access is needed for device previews"
 msgstr "카메라 접근 권한이 있어야 기기 미리보기를 할 수 있습니다"
 
 #. Description shown after camera preview permission is denied or unavailable.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:159
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:163
 msgid "Camera access was not granted. Update camera permissions, then try again."
 msgstr "카메라 접근 권한이 부여되지 않았습니다. 카메라 권한을 업데이트한 후 다시 시도하세요."
 
@@ -5592,7 +5572,7 @@ msgstr "카메라 끄기"
 
 #. Generic action label that enables the local camera.
 #. Notification sound setting label. Sound played when the user turns their camera on in a call.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:723
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:719
 #: src/features/notification/utils/SoundLabels.ts:52
 msgid "Camera on"
 msgstr "카메라 켜짐"
@@ -5804,26 +5784,26 @@ msgid "Captcha verification failed. Try again."
 msgstr "캡차 인증에 실패했습니다. 다시 시도해 주세요."
 
 #. Section header in the Linux audio source picker. Lists capture-target options (entire system / specific apps).
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:59
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:48
 msgid "Capture"
 msgstr "캡처"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:842
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:880
 msgid "Capture app audio"
 msgstr "앱 오디오 캡처"
 
-#. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:139
-msgid "Capture card"
-msgstr "캡처 카드"
-
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:843
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:882
 msgid "Capture desktop audio"
 msgstr "데스크톱 오디오 캡처"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:841
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:879
 msgid "Capture device audio"
 msgstr "기기 오디오 캡처"
+
+#. Toggle label in the stream settings menu for a window share whose audio scope the user widened from the shared window to the whole system mix.
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:157
+msgid "Capture entire system audio"
+msgstr "전체 시스템 오디오 캡처"
 
 #: src/features/guild/components/modals/guild_tabs/guild_overview_tab/fields/GuildInviteSplashSettingsField.tsx:100
 msgid "Card alignment"
@@ -5911,7 +5891,7 @@ msgid "Category deleted"
 msgstr "카테고리 삭제됨"
 
 #. Short label in the app layout channel list content.
-#: src/features/app/components/layout/ChannelListContent.tsx:74
+#: src/features/app/components/layout/ChannelListContent.tsx:75
 msgid "Category full"
 msgstr "카테고리 가득 참"
 
@@ -6087,7 +6067,7 @@ msgid "Change stream"
 msgstr "스트림 변경"
 
 #. Modal title for the screen-share picker when switching an ongoing stream to a new source.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:212
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:216
 msgid "Change stream source"
 msgstr "스트림 소스 변경"
 
@@ -6112,12 +6092,12 @@ msgid "Change what users without \"{readMessageHistoryPermissionLabel}\" can see
 msgstr "\"{readMessageHistoryPermissionLabel}\" 권한이 없는 사용자가 볼 수 있는 항목 변경"
 
 #. IAR modal: quick-action card description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:463
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:437
 msgid "Change who can call or add you."
 msgstr "나에게 전화하거나 나를 추가할 수 있는 사람 변경."
 
 #. IAR modal: quick-action card description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:451
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:425
 msgid "Change who can reach you."
 msgstr "나에게 연락할 수 있는 사람 변경."
 
@@ -6224,7 +6204,7 @@ msgid "Channel actions"
 msgstr "채널 작업"
 
 #. Toast confirming a channel was added to the favorites list.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:791
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:787
 msgid "Channel added to favorites"
 msgstr "채널이 즐겨찾기에 추가되었습니다"
 
@@ -6252,7 +6232,7 @@ msgstr "채널 디버그"
 #. Audit log entry label. Past-tense action describing that a channel was deleted.
 #. Toast confirming a channel was successfully deleted.
 #: src/features/app/config/AuditLogConstants.ts:20
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:759
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:755
 msgid "Channel deleted"
 msgstr "채널 삭제됨"
 
@@ -6357,7 +6337,7 @@ msgid "Channel record"
 msgstr "채널 기록"
 
 #. Toast confirming a channel was removed from the favorites list.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:787
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:783
 msgid "Channel removed from favorites"
 msgstr "즐겨찾는 채널에서 삭제됨"
 
@@ -6544,12 +6524,12 @@ msgid "Child safety concerns"
 msgstr "아동 안전 문제"
 
 #. IAR modal: child-safety rule label (message and guild reports).
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:98
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:80
 msgid "Child safety or exploitation of minors"
 msgstr "아동 안전 또는 미성년자 착취"
 
 #. IAR modal: rule-category label grouping child-safety and mature-content reports.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:66
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:48
 msgid "Child safety or mature content"
 msgstr "아동 안전 또는 성인 콘텐츠"
 
@@ -6726,7 +6706,7 @@ msgid "Choose payment method"
 msgstr "결제 수단 선택"
 
 #. Modal title for the screen-share picker when starting a new screen share.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:216
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:220
 msgid "Choose something to share"
 msgstr "공유할 항목 선택"
 
@@ -6834,7 +6814,7 @@ msgid "Choose your profile accent color"
 msgstr "프로필 강조 색상 선택"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:119
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:117
 msgid "Cisco"
 msgstr "시스코"
 
@@ -6872,7 +6852,7 @@ msgid "Claim your account"
 msgstr "계정 등록하기"
 
 #. IAR modal: body of the account-not-ready notice.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:45
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:27
 msgid "Claim your account and verify your email to send reports."
 msgstr "계정을 등록하고 이메일을 인증해야 신고를 보낼 수 있습니다."
 
@@ -6960,7 +6940,7 @@ msgid "Claim your gift to activate your {premiumProductName} subscription!"
 msgstr "{premiumProductName} 구독을 활성화하려면 선물을 받으세요!"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:339
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:313
 msgid "Claiming to be another person, brand, or organization."
 msgstr "다른 사람, 브랜드 또는 기관을 사칭하는 행위."
 
@@ -7128,7 +7108,7 @@ msgid "Cleared the topic."
 msgstr "주제를 지웠습니다."
 
 #. Footer summary description for the text-focused screen-share quality preset.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:240
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:244
 msgid "Clearer text"
 msgstr "더 선명한 텍스트"
 
@@ -7317,7 +7297,7 @@ msgid "Close popout"
 msgstr "PIP 닫기"
 
 #. IAR modal: quick-action card title.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:427
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:401
 msgid "Close this DM"
 msgstr "DM 닫기"
 
@@ -7344,7 +7324,7 @@ msgid "Close window"
 msgstr "창 닫기"
 
 #. Confirmation copy in the IAR modal for the Close DM quick action. Reassures the user the action is not destructive.
-#: src/features/moderation/components/report_modal/IARModal.tsx:68
+#: src/features/moderation/components/report_modal/IARModal.tsx:65
 msgid "Close your current DM with {dmDisplayName}. This does not block the user, and you can reopen the DM later."
 msgstr "{dmDisplayName}님과의 현재 DM을 닫습니다. 이 작업은 사용자를 차단하지 않으며, 나중에 DM을 다시 열 수 있습니다."
 
@@ -7410,7 +7390,7 @@ msgstr "석탄 테마"
 #. Label for an inbound phone verification code shown in the required-action modal.
 #: src/features/auth/components/modals/MfaTotpDisableModal.tsx:26
 #: src/features/auth/components/modals/MfaTotpEnableModal.tsx:36
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:346
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:445
 #: src/features/invite/components/InviteListItem.tsx:75
 #: src/features/moderation/components/report/ReportBreadcrumbs.tsx:29
 msgid "Code"
@@ -7442,7 +7422,7 @@ msgid "Code:"
 msgstr "코드:"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:78
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:76
 msgid "Codec"
 msgstr "코덱"
 
@@ -7685,7 +7665,7 @@ msgid "Community debug"
 msgstr "커뮤니티 디버그"
 
 #. Notification level option indicating the channel inherits the community default.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:763
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:759
 msgid "Community default"
 msgstr "커뮤니티 기본"
 
@@ -7700,12 +7680,12 @@ msgid "Community DM"
 msgstr "커뮤니티 DM"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:283
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:257
 msgid "Community exists to spam, scam, or abuse the platform."
 msgstr "커뮤니티는 스팸, 사기 또는 플랫폼 남용을 위해 존재합니다."
 
 #. IAR modal: rule description for a community report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:187
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:161
 msgid "Community facilitates pile-ons or targeted abuse."
 msgstr "커뮤니티는 집단 공격 또는 표적 학대를 조장합니다."
 
@@ -7867,7 +7847,7 @@ msgstr "커뮤니티 보이스"
 #. Permission category for permissions that affect the whole community.
 #: src/features/permissions/utils/PermissionLabelDescriptors.ts:133
 msgid "Community-wide"
-msgstr "Community-wide"
+msgstr "커뮤니티 전체"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/guild/components/modals/guild_tabs/GuildStickersTab.tsx:276
@@ -7962,7 +7942,7 @@ msgstr "입력창 자동 활성화"
 #. Button label that opens a dedicated advanced settings modal for configuring screen-share encoder controls.
 #. Button label that opens a dedicated advanced settings modal.
 #: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedChatControls.tsx:161
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:163
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:160
 msgid "Configure"
 msgstr "구성"
 
@@ -8109,7 +8089,7 @@ msgstr "카메라를 연결하고 다시 시도하세요."
 msgid "Connect a camera or virtual capture device, then try again."
 msgstr "카메라 또는 가상 캡처 장치를 연결한 후 다시 시도하세요."
 
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:129
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:133
 msgid "Connect a display, then try again."
 msgstr "디스플레이를 연결한 다음 다시 시도하세요."
 
@@ -8233,7 +8213,7 @@ msgid "Connection volume"
 msgstr "연결 볼륨"
 
 #. Settings search entry label. Names an advanced voice setting in the settings UI.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:30
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:28
 msgid "Connection volume controls"
 msgstr "연결 볼륨 컨트롤"
 
@@ -8304,7 +8284,7 @@ msgid "Content filtering"
 msgstr "콘텐츠 필터링"
 
 #. Label for an advanced screen-share select. Refers to the WebRTC MediaStreamTrack contentHint value.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:139
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:136
 msgid "Content hint"
 msgstr "콘텐츠 힌트"
 
@@ -8350,7 +8330,7 @@ msgstr "좌클릭(버튼) 또는 우클릭(다른 요소)으로 상황별 메뉴
 #: src/features/auth/components/pages/oauth_authorize_page/OAuthAccountStep.tsx:34
 #: src/features/auth/flow/HandoffApprovalFlow.tsx:109
 #: src/features/connection/components/modals/AddConnectionModal.tsx:384
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:711
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:707
 #: src/features/user/components/modals/FluxerTagChangeModal.tsx:397
 #: src/features/user/components/modals/tabs/AuthorizedAppsTab.tsx:181
 msgid "Continue"
@@ -8445,7 +8425,7 @@ msgid "Converts incoming content to speech, regardless of whether it came from /
 msgstr "/tts 명령어로 보냈는지 여부와 관계없이 수신된 콘텐츠를 음성으로 변환합니다."
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:363
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:337
 msgid "Coordinates raids, brigading, or harassment against people or communities."
 msgstr "특정인 또는 커뮤니티에 대한 공격, 집단 괴롭힘, 또는 희롱을 조장합니다."
 
@@ -8481,7 +8461,7 @@ msgstr "URL이 클립보드에 복사되었습니다"
 #: src/features/app/components/dialogs/shared/CopyLinkSection.tsx:11
 #: src/features/auth/components/modals/BackupCodesModal.tsx:96
 #: src/features/channel/components/textarea/TextareaContextMenu.tsx:50
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:423
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:397
 #: src/features/theme_studio/sections/QuickCssSection.tsx:214
 #: src/features/ui/action_menu/MessageContextMenu.tsx:71
 #: src/features/user/components/modals/tabs/applications_tab/application_detail/OAuthBuilderSection.tsx:228
@@ -8561,7 +8541,7 @@ msgid "Copy code"
 msgstr "코드 복사"
 
 #. Developer-mode action that copies a community snowflake/ID to the clipboard.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:727
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:723
 msgid "Copy community ID"
 msgstr "커뮤니티 ID 복사"
 
@@ -8659,7 +8639,7 @@ msgid "Copy invite URL"
 msgstr "초대 링크 복사"
 
 #. Generic action label that copies a URL to the clipboard.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:739
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:735
 #: src/features/user/components/modals/tabs/component_gallery_tab/ComponentGalleryTabButtonsTab.tsx:330
 #: src/features/user/components/modals/tabs/component_gallery_tab/index.tsx:145
 msgid "Copy link"
@@ -8692,7 +8672,7 @@ msgstr "메시지 복사"
 
 #. Developer-mode action that copies a message snowflake/ID to the clipboard.
 #. Keyboard shortcut action label shown in the shortcuts list and keybind editor. Keep short, sentence case.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:731
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:727
 #: src/features/input/state/input_keybind/shared.ts:277
 msgid "Copy message ID"
 msgstr "메시지 ID 복사"
@@ -8702,7 +8682,7 @@ msgstr "메시지 ID 복사"
 #. Keyboard shortcut action label shown in the shortcuts list and keybind editor. Keep short, sentence case.
 #: src/features/i18n/utils/CommonMessageDescriptors.ts:518
 #: src/features/input/state/input_keybind/shared.ts:273
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:415
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:389
 msgid "Copy message link"
 msgstr "메시지 링크 복사"
 
@@ -8768,7 +8748,7 @@ msgid "Copy user ID"
 msgstr "사용자 ID 복사"
 
 #. Action that copies a user username (handle) to the clipboard.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:735
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:731
 msgid "Copy username"
 msgstr "사용자 이름 복사"
 
@@ -9205,12 +9185,12 @@ msgid "Couldn't send invite"
 msgstr "초대장을 보낼 수 없습니다"
 
 #. Toast shown when sending an invite (group DM or community) fails.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:703
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:699
 msgid "Couldn't send invite. Try again."
 msgstr "초대장을 보낼 수 없습니다. 다시 시도해 주세요."
 
 #. Error toast in the IAR modal when the report submission fails. Keep tone plain and short.
-#: src/features/moderation/components/report_modal/IARModal.tsx:81
+#: src/features/moderation/components/report_modal/IARModal.tsx:78
 msgid "Couldn't send it. Try again."
 msgstr "보낼 수 없습니다. 다시 시도해 주세요."
 
@@ -9625,7 +9605,7 @@ msgid "Credentials"
 msgstr "자격 증명"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:211
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:185
 msgid "Credible threats, graphic violence, or glorification of violence."
 msgstr "신뢰할 수 있는 위협, 노골적인 폭력 또는 폭력 미화."
 
@@ -9770,18 +9750,18 @@ msgid "Currently: {mutedText}"
 msgstr "현재: {mutedText}"
 
 #. Footer summary label for custom screen-share quality settings.
+#. Screen-share audio summary shown when one audio source is selected but it has no readable name.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #. Short label in the voice tab. Keep it concise.
 #. Streaming preset label in the stream settings menu. Lets user pick resolution and frame rate manually.
-#. Summary label in the Linux audio source picker when a custom subset of apps is selected.
 #. Voice processing profile option label (mobile voice settings). User configures processing manually.
 #: src/features/user/components/modals/tabs/notifications_tab/NotificationsTabSounds.tsx:180
 #: src/features/user/components/modals/tabs/UserVoiceTab.tsx:77
 #: src/features/user/components/settings_utils/section_registry/AppearanceSections.ts:94
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:31
 #: src/features/voice/components/bottomsheets/VoiceSettingsBottomSheets.tsx:44
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:232
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:92
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:236
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:97
+#: src/features/voice/utils/ScreenShareAudioSummary.ts:24
 msgid "Custom"
 msgstr "사용자 지정"
 
@@ -9933,7 +9913,7 @@ msgid "Custom tags"
 msgstr "맞춤 태그"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:83
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:79
 msgid "Custom themes"
 msgstr "테마 직접 설정"
 
@@ -9963,12 +9943,12 @@ msgid "Custom value"
 msgstr "사용자 지정 값"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:39
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:35
 msgid "Custom video backgrounds"
 msgstr "맞춤 동영상 배경"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:62
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:60
 msgid "Custom voice processing"
 msgstr "맞춤 음성 처리"
 
@@ -9980,7 +9960,7 @@ msgid "Custom warning text"
 msgstr "맞춤 경고 문구"
 
 #. Last "Custom…" option in dropdown menus that opens a custom-value picker.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:767
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:763
 msgid "Custom…"
 msgstr "직접 지정…"
 
@@ -10161,11 +10141,6 @@ msgstr "데이터 내보내기"
 msgid "Date"
 msgstr "날짜"
 
-#. Field label for the date and time picker in the schedule-message modal. The ampersand is intentional.
-#: src/features/messaging/components/modals/ScheduleMessageModal.tsx:23
-msgid "Date & time"
-msgstr "날짜 및 시간"
-
 #. Form field label for a date and time value.
 #: src/features/ui/components/form/DateTimePickerField.tsx:22
 msgid "Date and time"
@@ -10329,7 +10304,7 @@ msgid "Default"
 msgstr "기본"
 
 #. Fallback label for the system default camera in the screen-share devices tab.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:147
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:151
 msgid "Default camera"
 msgstr "기본 카메라"
 
@@ -10421,7 +10396,7 @@ msgstr "배터리 수명 및 데이터 사용량 보존을 위해 모바일에�
 #: src/features/emoji/components/emojis/EmojiListItem.tsx:216
 #: src/features/emoji/components/stickers/StickerGridItem.tsx:35
 #: src/features/messaging/commands/MessageCommands.tsx:77
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:135
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:109
 #: src/features/theme_studio/sections/LibrarySection.tsx:514
 #: src/features/user/components/modals/tabs/account_security_tab/SecurityTab.tsx:399
 #: src/features/user/components/modals/tabs/component_gallery_tab/ComponentGalleryTabButtonsTab.tsx:117
@@ -10492,7 +10467,7 @@ msgid "Delete application"
 msgstr "앱 삭제"
 
 #. Generic action label that removes an attachment from the upload tray / message.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:747
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:743
 msgid "Delete attachment"
 msgstr "첨부파일 삭제"
 
@@ -10648,7 +10623,7 @@ msgid "Delete this invite? Can't be undone."
 msgstr "초대를 삭제할까요? 이 작업은 되돌릴 수 없습니다."
 
 #. IAR modal: quick-action card title for deleting the reported message (moderator-only).
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:127
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:101
 msgid "Delete this message"
 msgstr "이 메시지 삭제"
 
@@ -10688,7 +10663,7 @@ msgid "Delete your messages in this conversation?"
 msgstr "이 대화에서 내 메시지를 삭제하시겠어요?"
 
 #. IAR modal: disabled-state label on the delete card after the message has been deleted.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:139
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:113
 msgid "Deleted"
 msgstr "삭제됨"
 
@@ -10934,7 +10909,7 @@ msgid "Detached banner"
 msgstr "배너 분리됨"
 
 #. Option label for a WebRTC content hint select.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:155
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:152
 msgid "Detail"
 msgstr "세부 정보"
 
@@ -11009,7 +10984,7 @@ msgid "Device"
 msgstr "기기"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:14
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:12
 msgid "Device alerts"
 msgstr "기기 알림"
 
@@ -11022,12 +10997,12 @@ msgstr "장치 정보"
 msgid "Device revoked"
 msgstr "기기 연결 해제됨"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:1033
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:1074
 msgid "Device selection"
 msgstr "기기 선택"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:38
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:36
 msgid "Device volume"
 msgstr "기기 볼륨"
 
@@ -11046,12 +11021,12 @@ msgstr "장치:"
 #: src/features/user/components/settings_utils/search_index/DevicesIndex.ts:11
 #: src/features/user/components/settings_utils/section_registry/AppearanceSections.ts:82
 #: src/features/user/components/settings_utils/SettingsConstants.tsx:57
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:187
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:191
 msgid "Devices"
 msgstr "기기"
 
 #. Description for the Custom streaming preset. Lightly playful prose; keep tone casual.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:96
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:101
 msgid "Dial in your own numbers"
 msgstr "내 번호로 전화 걸기"
 
@@ -11154,7 +11129,7 @@ msgstr "바로 업로드 활성화됨"
 #. Short footer action in the screen-share picker that disables screen-share preview frame uploads.
 #: src/features/user/components/modals/tabs/account_security_tab/SecurityTab.tsx:238
 #: src/features/user/components/settings_utils/search_index/AccountSecurityIndex.ts:138
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:268
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:272
 msgid "Disable"
 msgstr "비활성화"
 
@@ -11227,7 +11202,7 @@ msgid "Disable mobile push notifications"
 msgstr "모바일 푸시 알림 끄기"
 
 #. Short label for an advanced screen-share preview preference.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:51
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:48
 msgid "Disable picture-in-picture popout for screen shares"
 msgstr "화면 공유 시 PIP 팝업 비활성화"
 
@@ -11353,7 +11328,7 @@ msgid "Disabled value"
 msgstr "비활성화된 값"
 
 #. Explains what happens after disabling screen-share preview uploads. Refers to already-uploaded preview thumbnails.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:316
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:320
 msgid "Disabling previews stops future preview uploads. Existing preview images may remain visible until the stream ends or the preview refreshes."
 msgstr "미리보기 기능을 사용 중지하면 이후 미리보기 업로드가 중단됩니다. 기존 미리보기 이미지는 스트림이 종료되거나 미리보기가 새로 고쳐질 때까지 계속 표시될 수 있습니다."
 
@@ -11497,7 +11472,7 @@ msgstr "멘션 해제"
 #: src/features/user/components/modals/tabs/chat_settings_tab/ChatSettingsTabInline.tsx:12
 #: src/features/user/components/modals/tabs/ChatSettingsTab.tsx:12
 #: src/features/user/components/settings_utils/section_registry/AppearanceSections.ts:154
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:142
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:146
 msgid "Display"
 msgstr "표시"
 
@@ -11554,7 +11529,7 @@ msgid "Display scaling"
 msgstr "화면 배율"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:303
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:277
 msgid "Distributes malware, credential theft, or harmful files."
 msgstr "멀웨어, 개인 정보 도용 또는 유해 파일을 배포합니다."
 
@@ -11564,7 +11539,7 @@ msgid "DM"
 msgstr "DM"
 
 #. IAR modal: quick-action card title.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:447
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:421
 msgid "DM & friend request settings"
 msgstr "DM 및 친구 요청 설정"
 
@@ -11690,13 +11665,13 @@ msgid "Doesn't allow being added to group DMs"
 msgstr "그룹 DM에 추가될 수 없음"
 
 #. IAR modal: quick-action card description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:431
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:405
 msgid "Doesn't block. You can reopen later."
 msgstr "차단하지 않습니다. 나중에 다시 열 수 있습니다."
 
 #. Generic form-field / table-column label for an internet domain.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:771
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:767
 #: src/features/user/components/settings_utils/search_index/LinkedAccountsIndex.ts:28
 msgid "Domain"
 msgstr "도메인"
@@ -11761,7 +11736,7 @@ msgstr "{deviceName} 다시 추천 안 함"
 #: src/features/auth/components/pages/oauth_authorize_page/OAuthSuccessState.tsx:44
 #: src/features/channel/components/pickers/gif/ImportFavoriteGifsModal.tsx:54
 #: src/features/input/components/KeybindRecorder.tsx:470
-#: src/features/moderation/components/report_modal/IARModal.tsx:97
+#: src/features/moderation/components/report_modal/IARModal.tsx:94
 #: src/features/moderation/components/report/ReportBreadcrumbs.tsx:31
 #: src/features/search/components/search/ChannelFilterSheet.tsx:165
 #: src/features/search/components/search/HasFilterSheet.tsx:206
@@ -11777,7 +11752,7 @@ msgstr "두 번 탭"
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/user/components/settings_utils/section_registry/AppearanceSections.ts:386
 msgid "Double-click"
-msgstr "Double-click"
+msgstr "더블 클릭"
 
 #. Empty / hint text on the screen-share hover card explaining how to start watching a remote stream.
 #: src/features/voice/components/StreamWatchHoverCard.tsx:33
@@ -11904,12 +11879,12 @@ msgid "Downloading desktop update…"
 msgstr "데스크톱 업데이트 다운로드 중…"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:311
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:285
 msgid "Doxxing, exposed private info, or stalking."
 msgstr "신상 털기, 개인 정보 노출, 스토킹."
 
 #. IAR modal: rule-category description for the privacy / impersonation group.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:78
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:60
 msgid "Doxxing, stalking, pretending to be someone, or an inappropriate profile."
 msgstr "개인 정보 유출, 스토킹, 사칭 또는 부적절한 프로필."
 
@@ -12065,7 +12040,7 @@ msgid "e.g., YubiKey, iPhone, work computer"
 msgstr "예: YubiKey, iPhone, 회사 컴퓨터"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:79
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:75
 msgid "Early access to new features"
 msgstr "새로운 기능 미리 이용하기"
 
@@ -12209,7 +12184,7 @@ msgstr "미디어 수정"
 
 #. Generic action label that opens the message edit composer.
 #. Keyboard shortcut action label shown in the shortcuts list and keybind editor. Keep short, sentence case.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:707
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:703
 #: src/features/input/state/input_keybind/shared.ts:9
 msgid "Edit message"
 msgstr "메시지 수정"
@@ -12386,7 +12361,7 @@ msgid "Email unavailable"
 msgstr "이메일 사용 불가"
 
 #. Required-action error shown when email update cannot continue.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:402
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:501
 msgid "Email update is unavailable right now. Try again later or contact support."
 msgstr "지금은 이메일을 업데이트할 수 없습니다. 나중에 다시 시도하거나 지원팀에 문의하세요."
 
@@ -12394,6 +12369,11 @@ msgstr "지금은 이메일을 업데이트할 수 없습니다. 나중에 다�
 #: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:12
 msgid "Email update required"
 msgstr "이메일 업데이트 필요"
+
+#. Body of the human-review option in the required-action modal, rendered directly above the Contact support link. Sets the expectation that a reply takes time.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:273
+msgid "Email us and a person will review your account. Tell us you cannot verify by SMS and we will take it from there. Replies come by email, so this is not instant."
+msgstr "이메일로 문의하시면 담당자가 계정을 검토합니다. SMS 인증이 불가능하다고 알려주시면 저희가 처리하겠습니다. 답장은 이메일로 발송되므로 즉시 확인은 어렵습니다."
 
 #. Developer control label for the email-verification banner.
 #: src/features/devtools/components/NagbarControls.ts:31
@@ -12666,7 +12646,7 @@ msgid "Enable browser notifications"
 msgstr "브라우저 알림 켜기"
 
 #. Description shown before the user explicitly requests camera preview permission.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:155
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:159
 msgid "Enable camera access to preview cameras and capture devices before choosing one to stream."
 msgstr "스트리밍할 카메라 및 캡처 장치를 선택하기 전에 미리 보려면 카메라 액세스를 허용하세요."
 
@@ -12751,7 +12731,7 @@ msgstr "모바일 푸시 알림 켜기"
 
 #. Generic action label / toggle that turns on push or desktop notifications.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:779
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:775
 #: src/features/user/components/settings_utils/section_registry/NotificationsSections.ts:127
 msgid "Enable notifications"
 msgstr "알림 켜기"
@@ -12777,7 +12757,7 @@ msgid "Enable or disable built-in translators. Enabled translators appear in the
 msgstr "내장 번역기를 켜거나 끌 수 있습니다. 번역기를 켜면 텍스트 선택 시 메시지 컨텍스트 메뉴에 표시됩니다."
 
 #. Button that explicitly requests camera permission for device previews.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:163
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:167
 msgid "Enable previews"
 msgstr "미리보기 사용"
 
@@ -12894,28 +12874,28 @@ msgstr "성인 콘텐츠를 사용하도록 설정했습니다."
 
 #. Label for an advanced screen-share select. Refers to hardware or software video encoding.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:59
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:180
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:56
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:153
 msgid "Encoder path"
 msgstr "인코더 경로"
 
 #. Description for the encoder path select.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:63
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:60
 msgid "Encoder preference for new screen shares."
 msgstr "새로운 화면 공유에 대한 인코더 설정"
 
 #. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:200
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:173
 msgid "Encoder, SVC, backup stream, and bitrate presets"
 msgstr "인코더, SVC, 백업 스트림 및 비트 전송률 사전 설정"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:375
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:349
 msgid "Encourages self-harm"
 msgstr "자해 권유"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:379
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:353
 msgid "Encourages suicide, self-harm, or eating disorders."
 msgstr "자살, 자해 또는 섭식 장애 조장."
 
@@ -12953,7 +12933,7 @@ msgid "End-to-end encryption is unavailable because an unsupported participant i
 msgstr "지원되지 않는 참여자가 이 음성 채널에 있어 종단 간 암호화를 사용할 수 없습니다."
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:255
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:229
 msgid "Endangers minors or hosts child-exploitation content."
 msgstr "미성년자를 위험에 빠뜨리거나 아동 착취 콘텐츠를 호스팅합니다."
 
@@ -12982,7 +12962,7 @@ msgstr "영어(미국)"
 #. Generic radio / dropdown option label for an "enhanced" tier.
 #. Noise suppression option label in the voice tab (neural filter). Keep it concise.
 #. Noise suppression option using the enhanced neural filter (DeepFilterNet3). Keep it concise.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:783
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:779
 #: src/features/user/components/modals/tabs/UserVoiceTab.tsx:85
 #: src/features/voice/components/voice_connection_status/AudioProcessingModal.tsx:47
 msgid "Enhanced"
@@ -13037,7 +13017,7 @@ msgstr "유효한 {theOtherPlatform} 템플릿 URL 또는 코드를 입력하세
 
 #. Inline validation error on the email step of the DSA report flow when the email is malformed.
 #. Required-action form error for an invalid email address.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:390
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:489
 #: src/features/moderation/components/pages/ReportPage.tsx:59
 msgid "Enter a valid email address."
 msgstr "유효한 이메일 주소를 입력하세요."
@@ -13048,7 +13028,7 @@ msgid "Enter a valid message link."
 msgstr "유효한 메시지 링크를 입력하세요."
 
 #. Required-action form error for an invalid phone number.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:406
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:505
 msgid "Enter a valid mobile phone number."
 msgstr "유효한 휴대폰 번호를 입력하세요."
 
@@ -13065,7 +13045,7 @@ msgid "Enter a valid username ({exampleFluxerTagFull})."
 msgstr "유효한 사용자 이름({exampleFluxerTagFull})을 입력하세요."
 
 #. Required-action modal body for entering a replacement email address.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:272
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:371
 msgid "Enter an email you can open. We will send a code there."
 msgstr "열 수 있는 이메일 주소를 입력해 주세요. 해당 주소로 코드를 보내드립니다."
 
@@ -13089,7 +13069,7 @@ msgid "Enter gift code…"
 msgstr "선물 코드 입력…"
 
 #. Required-action modal carousel step title for changing to a new email address.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:276
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:375
 msgid "Enter new email"
 msgstr "새 이메일 주소 입력"
 
@@ -13124,7 +13104,7 @@ msgid "Enter the {digitCount}-digit code from your authenticator app."
 msgstr "인증 앱의 {digitCount}자리 코드를 입력하세요."
 
 #. Required-action modal body for entering an SMS code. digitCount and phoneNumber are inserted by code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:310
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:409
 msgid "Enter the {digitCount}-digit code sent to {phoneNumber}."
 msgstr "{phoneNumber}으로 전송된 {digitCount}자리 코드를 입력하세요."
 
@@ -13143,7 +13123,7 @@ msgid "Enter the code from your authenticator app."
 msgstr "인증 앱의 코드를 입력하세요."
 
 #. Required-action modal body for entering a code sent to a new email address. emailAddress is inserted by code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:288
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:387
 msgid "Enter the code sent to {emailAddress}."
 msgstr "{emailAddress}으로 전송된 코드를 입력하세요."
 
@@ -13174,7 +13154,7 @@ msgid "Enter the code with {MFA_CODE_DIGIT_COUNT} digits sent to {0}."
 msgstr "{0}으로 전송된 {MFA_CODE_DIGIT_COUNT}자리 코드를 입력하세요."
 
 #. Required-action modal carousel step title for entering an email verification code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:284
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:383
 msgid "Enter the email code"
 msgstr "이메일 코드 입력"
 
@@ -13192,7 +13172,7 @@ msgid "Enter the PIN for your security key to continue."
 msgstr "계속하려면 보안 키의 PIN을 입력하세요."
 
 #. Required-action modal carousel step title for entering a phone SMS verification code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:306
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:405
 msgid "Enter the SMS code"
 msgstr "SMS 코드 입력"
 
@@ -13228,7 +13208,7 @@ msgid "Enter your password."
 msgstr "비밀번호를 입력하세요."
 
 #. Required-action modal carousel step title for entering a phone number.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:293
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:392
 msgid "Enter your phone number"
 msgstr "전화번호를 입력하세요"
 
@@ -13238,16 +13218,16 @@ msgid "Entertainment"
 msgstr "엔터테인먼트"
 
 #. Tab label in the screen-share picker. Lists shareable monitors / displays.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:183
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:187
 msgid "Entire screen"
 msgstr "전체 화면"
 
-#. Summary label in the Linux audio source picker when capturing the whole system audio mix.
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:40
+#. Screen-share audio summary shown when the whole system audio mix is captured.
+#: src/features/voice/utils/ScreenShareAudioSummary.ts:32
 msgid "Entire system"
 msgstr "시스템 전체"
 
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:235
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:249
 msgid "Entire system audio"
 msgstr "시스템 오디오 전체"
 
@@ -13290,7 +13270,7 @@ msgid "Entrance sound volume"
 msgstr "입장 사운드 볼륨"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:43
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:39
 msgid "Entrance sounds"
 msgstr "입장 효과음"
 
@@ -13424,7 +13404,7 @@ msgid "exclude a user"
 msgstr "사용자 제외"
 
 #. Section header in the Linux audio source picker for apps excluded from the system mix.
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:68
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:57
 msgid "Exclude from system"
 msgstr "시스템에서 제외"
 
@@ -13518,7 +13498,7 @@ msgstr "실험적인 기능"
 #. Compact badge shown beside settings that enable experimental behavior.
 #: src/features/user/components/settings_utils/SettingsStatusBadge.tsx:18
 msgid "EXPERIMENTAL"
-msgstr "EXPERIMENTAL"
+msgstr "실험적"
 
 #. Label above the expiration duration dropdown in the invite link settings.
 #: src/features/invite/components/modals/InviteModal.tsx:102
@@ -13667,7 +13647,7 @@ msgid "Expression autocomplete"
 msgstr "표현 자동 완성"
 
 #. Aria label for the expression picker category nav.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:751
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:747
 msgid "Expression picker categories"
 msgstr "표정 선택기 카테고리"
 
@@ -13851,7 +13831,7 @@ msgid "Failed to load invites. Try again."
 msgstr "초대 로드에 실패했습니다. 다시 시도해 주세요."
 
 #. Error text shown in the screen-share picker when the list of shareable windows/displays fails to load.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:116
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:120
 msgid "Failed to load shareable sources."
 msgstr "공유 가능한 소스를 불러오지 못했습니다."
 
@@ -14062,7 +14042,7 @@ msgid "Failed to upload emojis. Try again."
 msgstr "이모티콘 업로드에 실패했습니다. 다시 시도해 주세요."
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:263
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:237
 msgid "False claims likely to cause real-world harm."
 msgstr "실제 피해를 야기할 수 있는 허위 주장."
 
@@ -14146,7 +14126,7 @@ msgstr "즐겨찾기"
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:177
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:172
 msgid "Feature"
 msgstr "기능"
 
@@ -14162,7 +14142,7 @@ msgstr "일시적으로 비활성화된 기능"
 msgid "Features"
 msgstr "기능"
 
-#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:232
+#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:231
 msgid "Fetch a URL and inspect the embed payload the chat renderer receives."
 msgstr "URL을 가져와서 채팅 렌더러가 수신하는 임베드 페이로드를 검사합니다."
 
@@ -14221,7 +14201,7 @@ msgid "File upload"
 msgstr "파일 업로드"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:55
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:51
 msgid "File upload size"
 msgstr "파일 업로드 크기"
 
@@ -14346,12 +14326,12 @@ msgid "Fingerprint"
 msgstr "지문"
 
 #. Button label in the IAR modal that opens the account-setup flow.
-#: src/features/moderation/components/report_modal/IARModal.tsx:85
+#: src/features/moderation/components/report_modal/IARModal.tsx:82
 msgid "Finish account setup"
 msgstr "계정 설정 완료"
 
 #. IAR modal: title of the account-not-ready notice.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:41
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:23
 msgid "Finish account setup first"
 msgstr "먼저 계정 설정을 완료하세요"
 
@@ -14404,12 +14384,12 @@ msgid "Flexible text channel names"
 msgstr "유연한 텍스트 채널 이름"
 
 #. Description for the high-tier Gaming streaming preset (Plutonium). Resolution and frame rate are technical tokens.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:69
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:74
 msgid "Fluid motion at 1440p 60 FPS"
 msgstr "1440p 60FPS에서 부드러운 움직임"
 
 #. Description for the free-tier Gaming streaming preset. Resolution and frame rate are technical tokens.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:74
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:79
 msgid "Fluid motion at 720p 30 FPS"
 msgstr "720p 30FPS로 부드러운 움직임"
 
@@ -14496,7 +14476,7 @@ msgstr "폴더 설정"
 msgid "Follow us on {blueskyProviderName}"
 msgstr "{blueskyProviderName}에서 팔로우하세요"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:895
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:936
 msgid "Follow voice input"
 msgstr "음성 입력 따라가기"
 
@@ -14575,7 +14555,7 @@ msgid "For me"
 msgstr "나를 위해"
 
 #. Required-action modal body for starting an inbound phone verification challenge.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:318
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:417
 msgid "For this check, you send us a text message instead of receiving one from us."
 msgstr "이 확인 절차에서는 메시지를 받는 대신 저희에게 문자 메시지를 보내주셔야 합니다."
 
@@ -14768,7 +14748,7 @@ msgstr "프레임"
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/user/components/modals/tabs/UserVideoTab.tsx:310
 #: src/features/user/components/settings_utils/section_registry/VoiceVideoSections.ts:225
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:124
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:129
 msgid "Frame rate"
 msgstr "프레임률"
 
@@ -14782,7 +14762,7 @@ msgstr "30FPS를 초과하는 프레임 속도에는 {premiumProductName}이(가
 msgid "France"
 msgstr "프랑스"
 
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:182
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:177
 msgid "Free"
 msgstr "무료"
 
@@ -15001,7 +14981,7 @@ msgid "Fully quit and restart {productName} so macOS applies this permission."
 msgstr "이 권한을 적용하려면 {productName}을(를) 완전히 종료하고 다시 시작하세요."
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:54
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:52
 msgid "Gain control"
 msgstr "제어하기"
 
@@ -15014,8 +14994,8 @@ msgstr "게임 컨트롤러"
 #. Footer summary label for the gaming screen-share quality preset.
 #. Streaming preset label in the stream settings menu. Higher frame rate, optimized for video games.
 #: src/features/guild/components/modals/guild_tabs/GuildDiscoveryTab.tsx:76
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:224
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:65
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:228
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:70
 msgid "Gaming"
 msgstr "게임"
 
@@ -15077,7 +15057,7 @@ msgid "Germany"
 msgstr "독일"
 
 #. Generic upsell CTA button to start the Plutonium purchase flow. Preserve {premiumProductName}.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:795
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:791
 msgid "Get {premiumProductName}"
 msgstr "{premiumProductName} 이용하기"
 
@@ -15348,7 +15328,7 @@ msgid "Glad you're here, {username}!"
 msgstr "{username}님, 오신 것을 환영합니다!"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:67
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:63
 msgid "Global emoji & sticker access"
 msgstr "전 세계 이모티콘 및 스티커 이용"
 
@@ -15515,7 +15495,7 @@ msgstr "{0} 부여됨."
 msgid "Grants all permissions and bypasses channel restrictions. Highly sensitive."
 msgstr "모든 권한을 부여하고 채널 제한을 우회합니다. 매우 민감한 권한입니다."
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:1020
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:1061
 msgid "Granular selection"
 msgstr "세부 선택"
 
@@ -15556,7 +15536,7 @@ msgid "Grid view"
 msgstr "격자 보기"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:247
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:221
 msgid "Grooming or child-exploitation content."
 msgstr "그루밍 또는 아동 착취 콘텐츠입니다."
 
@@ -15694,22 +15674,22 @@ msgid "Grouping"
 msgstr "그룹화"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:115
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:113
 msgid "H.264"
 msgstr "H.264"
 
 #. Label for an advanced screen-share select. H.264 is a codec name and should stay literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:123
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:120
 msgid "H.264 backup stream"
 msgstr "H.264 백업 스트림"
 
 #. Option label for an H.264 backup stream select. H.264 is a codec name and should stay literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:135
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:132
 msgid "H.264 simulcast backup"
 msgstr "H.264 동시 전송 백업"
 
 #. Option label for the screen-share codec select while the HEVC opt-in is off and the option is disabled. H.265 is a codec name and should stay literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:181
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:178
 msgid "H.265 (requires opt-in)"
 msgstr "H.265(옵트인 필요)"
 
@@ -15726,7 +15706,7 @@ msgid "Harassment"
 msgstr "괴롭힘"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:231
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:205
 msgid "Harassment involving mature content"
 msgstr "성인 콘텐츠 관련 괴롭힘"
 
@@ -15736,17 +15716,17 @@ msgid "Harassment or bullying"
 msgstr "괴롭힘 또는 따돌림"
 
 #. IAR modal: rule label for a user report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:175
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:149
 msgid "Harassment or stalking"
 msgstr "괴롭힘 또는 스토킹"
 
 #. IAR modal: rule label for a community report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:183
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:157
 msgid "Harassment or targeted abuse"
 msgstr "괴롭힘 또는 표적 학대"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:167
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:141
 msgid "Harassment or threats"
 msgstr "괴롭힘 또는 위협"
 
@@ -15765,7 +15745,7 @@ msgid "Hardware acceleration can cause rendering glitches with transparent windo
 msgstr "하드웨어 가속은 투명 창에서 렌더링 오류를 일으킬 수 있습니다. 화면 깜빡임이나 번짐 현상이 나타나면 --disable-gpu를 사용해 보세요."
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:188
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:161
 msgid "Hardware encoder"
 msgstr "하드웨어 인코더"
 
@@ -15780,7 +15760,7 @@ msgid "Hardware-accelerated on most Windows and macOS systems. Reliable for olde
 msgstr "대부분의 Windows 및 macOS 기기에서 하드웨어 가속을 지원합니다. 구형 기기에서도 안정적입니다."
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:259
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:233
 msgid "Harmful misinformation"
 msgstr "유해한 허위 정보"
 
@@ -15805,7 +15785,7 @@ msgstr "구매 이력 재정의"
 
 #. IAR modal: rule label.
 #. Report category label for hate speech. Keep tone plain and neutral.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:191
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:165
 #: src/features/moderation/components/report/OptionDescriptors.ts:28
 msgid "Hate speech"
 msgstr "혐오 발언"
@@ -15900,12 +15880,12 @@ msgid "Help translate {PRODUCT_NAME} into your language on <0>{I18N_WEBLATE_DOMA
 msgstr "{PRODUCT_NAME}을(를) 귀하의 언어로 번역하는 데 참여해 주세요. <0>{I18N_WEBLATE_DOMAIN}</0>에서 가능합니다."
 
 #. Description for a WebRTC content hint select. Keep Motion, Detail, and text as plain option concepts.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:143
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:140
 msgid "Helps the browser choose motion, detail, or text handling."
 msgstr "브라우저가 움직임, 디테일 또는 텍스트 처리를 선택하도록 도와줍니다."
 
 #. Settings search synonym. Codec name; keep literal. Used to match this term in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:107
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:105
 msgid "HEVC"
 msgstr "HEVC"
 
@@ -16012,7 +15992,7 @@ msgid "Hide expiry footnotes"
 msgstr "만료 각주 숨기기"
 
 #. Toggle / action label that collapses or hides the favorites section.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:695
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:691
 msgid "Hide favorites"
 msgstr "즐겨찾기 숨기기"
 
@@ -16060,7 +16040,7 @@ msgid "Hide muted channels by default?"
 msgstr "음소거된 채널을 기본으로 숨길까요?"
 
 #. Short label for an advanced stream privacy preference.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:55
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:52
 msgid "Hide my stream preview thumbnail"
 msgstr "내 스트림 미리보기 썸네일 숨기기"
 
@@ -16079,7 +16059,7 @@ msgstr "비밀번호 숨기기"
 msgid "Hide picture-in-picture popout?"
 msgstr "화면 속 화면 팝업 숨기기?"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:804
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:838
 msgid "Hide preview thumbnail"
 msgstr "미리보기 썸네일 숨기기"
 
@@ -16141,7 +16121,7 @@ msgid "High dynamic range display mode"
 msgstr "HDR 디스플레이 모드"
 
 #. Description for a software encoder quality select. Keep AV1 and CPU literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:83
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:80
 msgid "Higher quality can cost more CPU and latency."
 msgstr "더 높은 품질은 더 많은 CPU와 지연 시간을 유발할 수 있습니다."
 
@@ -16331,21 +16311,6 @@ msgstr "툴팁입니다"
 msgid "I changed my mind"
 msgstr "마음이 바뀌었어요"
 
-#. IAR modal: preference path option label for a community report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:32
-msgid "I don't like this community"
-msgstr "이 커뮤니티가 마음에 들지 않습니다"
-
-#. IAR modal: preference path option label for a message report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:24
-msgid "I don't like this content"
-msgstr "이 콘텐츠가 마음에 들지 않습니다"
-
-#. IAR modal: preference path option label for a user report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:28
-msgid "I don't like this user"
-msgstr "이 사용자가 마음에 들지 않습니다"
-
 #. Secondary button in the required-action modal. Opens recovery options for the current verification step.
 #: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:166
 msgid "I need another way"
@@ -16408,7 +16373,7 @@ msgid "If {pixPaymentMethod} is unavailable or you prefer standard pricing, you 
 msgstr "{pixPaymentMethod}를 사용할 수 없거나 일반 요금을 선호하는 경우 언제든지 USD로 전환할 수 있습니다."
 
 #. IAR modal: inline routing hint shown under reasons that overlap with child safety.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:106
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:88
 msgid "If a minor is involved, use \"{childSafetyReasonName}\" instead."
 msgstr "미성년자가 관련된 경우, 대신 \"{childSafetyReasonName}\"을(를) 사용하세요."
 
@@ -16418,7 +16383,7 @@ msgid "If recurring {upiPaymentMethod} is unavailable or you prefer standard pri
 msgstr "반복 {upiPaymentMethod}를 사용할 수 없거나 일반 요금을 선호하는 경우 언제든지 USD로 전환할 수 있습니다."
 
 #. IAR modal: inline safety note for self-harm reports.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:395
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:369
 msgid "If someone may be in immediate danger, contact local emergency services if you can do so safely."
 msgstr "누군가 즉각적인 위험에 처해 있다면, 안전하게 조치할 수 있는 경우 현지 응급 서비스에 연락하세요."
 
@@ -16428,17 +16393,17 @@ msgid "If someone told you to paste something here, it is a scam that can hand t
 msgstr "누군가 여기에 복사하라고 말하면, 이는 귀하의 {productName} 계정을 탈취할 수 있는 사기입니다."
 
 #. IAR modal: inline safety note shown for child-safety reports.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:391
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:365
 msgid "If this involves CSAM or exploitation of a minor, send it now and don't reshare the material."
 msgstr "아동 성착취물 또는 미성년자 착취와 관련된 경우, 지금 바로 신고하고 해당 자료를 다시 공유하지 마세요."
 
 #. IAR modal: inline safety note for violence reports.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:399
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:373
 msgid "If this is a credible imminent threat, contact local emergency services too."
 msgstr "긴급한 위협이라고 판단되면 현지 응급 서비스에도 연락하세요."
 
 #. IAR modal: inline safety note for terrorism reports.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:403
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:377
 msgid "If this is an imminent terrorist threat, contact local emergency services too."
 msgstr "이것이 임박한 테러 위협이라면, 지역 응급 서비스에도 연락하세요."
 
@@ -16456,6 +16421,11 @@ msgstr "특정 메시지에 대한 신고라면 해당 메시지를 직접 신�
 #: src/features/moderation/utils/ReportActionUtils.tsx:22
 msgid "If this report is about specific messages, report the most relevant message instead. Message reports give our safety team the clearest context, and adding details in the comments can help us review it faster. Only continue with reporting the user as a whole if reporting a message would not capture the broader issue."
 msgstr "특정 메시지에 대한 신고라면, 해당 메시지를 직접 신고해 주세요. 메시지 신고는 안전팀이 상황을 명확하게 파악하는 데 도움이 되며, 댓글에 세부 정보를 추가하면 더 빠르게 검토할 수 있습니다. 메시지 신고만으로는 전체적인 문제를 파악하기 어렵다고 판단될 경우에만 사용자 전체 신고를 진행해 주세요."
+
+#. Heading of the alternative-routes block in the required-action modal. Introduces human review and the option to set the phone check aside. Must read as a real supported route, not fine print.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:268
+msgid "If you can't verify by SMS"
+msgstr "SMS로 인증할 수 없는 경우"
 
 #. Required-action modal body when the user must contact support for account recovery.
 #: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:260
@@ -16524,11 +16494,11 @@ msgstr "무시"
 msgid "Ignore friend request"
 msgstr "친구 요청 무시하기"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:1010
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:1051
 msgid "Ignore hardware devices"
 msgstr "하드웨어 기기 무시"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:986
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:1027
 msgid "Ignore input media"
 msgstr "입력 미디어 무시"
 
@@ -16554,29 +16524,29 @@ msgstr "스팸 신고 무시"
 msgid "Ignore the friend request from {displayName}?"
 msgstr "{displayName}님의 친구 요청을 무시하시겠어요?"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:997
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:1038
 msgid "Ignore virtual"
 msgstr "가상 배경 무시"
 
 #. IAR modal: rule label.
 #. Report category label for content describing or coordinating illegal activity. Keep tone plain.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:351
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:325
 #: src/features/moderation/components/report/OptionDescriptors.ts:44
 msgid "Illegal activity"
 msgstr "불법 활동"
 
 #. IAR modal: rule-category label grouping illegal activity and the catch-all "Other" option.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:90
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:72
 msgid "Illegal activity or something else"
 msgstr "불법 활동 또는 기타"
 
 #. IAR modal: rule-category description for the illegal / other group.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:94
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:76
 msgid "Illegal sales, criminal facilitation, or a clear rule violation that doesn't fit above."
 msgstr "불법 판매, 범죄 조장 또는 위에 해당하지 않는 명확한 규칙 위반."
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:355
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:329
 msgid "Illegal sales, criminal facilitation, or unlawful activity."
 msgstr "불법 판매, 범죄 조장 또는 불법 활동."
 
@@ -16675,13 +16645,13 @@ msgstr "클립보드에서 붙여넣은 이미지는 첨부파일로 전송됩�
 
 #. IAR modal: rule label.
 #. Report category label for a user impersonating another person or brand.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:327
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:301
 #: src/features/moderation/components/report/OptionDescriptors.ts:66
 msgid "Impersonation"
 msgstr "사칭"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:331
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:305
 msgid "Impersonation or deceptive media"
 msgstr "사칭 또는 기만적인 미디어"
 
@@ -16907,7 +16877,7 @@ msgid "Include all except selected"
 msgstr "선택된 항목 제외 모두 포함"
 
 #. Section header in the Linux audio source picker for the per-app inclusion list.
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:64
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:53
 msgid "Include apps"
 msgstr "앱 포함"
 
@@ -17482,7 +17452,7 @@ msgstr "초대한 사람:"
 #. Generic section / tab label for the invites list.
 #: src/features/channel/components/modals/channel_tabs/ChannelInvitesTab.tsx:191
 #: src/features/guild/components/modals/guild_tabs/GuildInvitesTab.tsx:53
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:683
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:679
 msgid "Invites"
 msgstr "초대"
 
@@ -17670,7 +17640,7 @@ msgid "Join call"
 msgstr "통화 참여"
 
 #. Generic action label that accepts a community invite / joins a community.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:679
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:675
 msgid "Join community"
 msgstr "커뮤니티 참가하기"
 
@@ -17982,7 +17952,7 @@ msgid "Kick a member from this community."
 msgstr "이 커뮤니티에서 멤버 내보내기."
 
 #. Moderation action label that removes a member from a community without banning.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:675
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:671
 msgid "Kick member"
 msgstr "멤버 내보내기"
 
@@ -18095,12 +18065,12 @@ msgid "Launch at login"
 msgstr "로그인 시 실행"
 
 #. Description for an SVC mode select. Keep SVC and AV1 literal.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:103
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:100
 msgid "Layering for AV1 and VP9 when available."
 msgstr "SVC 및 AV1 사용 시 레이어링 기능입니다."
 
 #. Accessible label for the screen-share picker footer info button.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:272
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:276
 msgid "Learn about screen share previews"
 msgstr "화면 공유 미리보기에 대해 자세히 알아보세요"
 
@@ -18110,9 +18080,19 @@ msgid "Learn more"
 msgstr "자세히 알아보기"
 
 #. IAR modal: quick-action card button label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:443
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:417
 msgid "Leave"
 msgstr "나가기"
+
+#. Confirmation dialog title in the required-action modal when communities will be left. count is inserted by code.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:300
+msgid "Leave {count, plural, one {# community} other {# communities}} and set this check aside?"
+msgstr "{count, plural, one {#개의 커뮤니티} other {#개의 커뮤니티}}를 나가고 이 확인을 보류하시겠어요?"
+
+#. Primary button of the set-aside confirmation in the required-action modal when communities will be left. Uses the destructive button style.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:336
+msgid "Leave and set aside"
+msgstr "나가서 보관하기"
 
 #. Short label in the authentication auth register form core. Keep the tone plain and specific.
 #: src/features/auth/flow/AuthRegisterFormCore.tsx:63
@@ -18125,7 +18105,7 @@ msgid "Leave call"
 msgstr "통화 종료"
 
 #. Destructive action label that removes the current user from a community.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:671
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:667
 msgid "Leave community"
 msgstr "커뮤니티 나가기"
 
@@ -18145,7 +18125,7 @@ msgid "Leave silently"
 msgstr "알림 없이 나가기"
 
 #. IAR modal: quick-action card title.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:435
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:409
 msgid "Leave the community"
 msgstr "커뮤니티 나가기"
 
@@ -18810,18 +18790,18 @@ msgstr "몰타"
 
 #. IAR modal: rule label.
 #. Report category label for a community distributing malware or malicious software.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:299
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:273
 #: src/features/moderation/components/report/OptionDescriptors.ts:103
 msgid "Malware distribution"
 msgstr "악성코드 유포"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:287
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:261
 msgid "Malware or dangerous links"
 msgstr "악성코드 또는 위험한 링크"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:291
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:265
 msgid "Malware, credential theft, or harmful files."
 msgstr "악성코드, 개인 정보 도용 또는 유해 파일."
 
@@ -18987,7 +18967,7 @@ msgstr "스포일러로 표시"
 
 #. Generic action label that flips a channel back to unread.
 #. Keyboard shortcut action label shown in the shortcuts list and keybind editor. Keep short, sentence case.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:667
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:663
 #: src/features/input/state/input_keybind/shared.ts:33
 msgid "Mark as unread"
 msgstr "안 읽음으로 표시"
@@ -19093,7 +19073,7 @@ msgid "Mask Visionary as subscription"
 msgstr "Visionary 구독 마스크"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:271
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:245
 msgid "Mass spam, fraud, fake giveaways, or account abuse."
 msgstr "대량 스팸, 사기, 가짜 경품 또는 계정 남용."
 
@@ -19175,12 +19155,12 @@ msgid "Mature content not allowed"
 msgstr "성인 콘텐츠는 허용되지 않습니다"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:223
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:197
 msgid "Mature content or harassment"
 msgstr "성인 콘텐츠 또는 괴롭힘"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:239
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:213
 msgid "Mature content or unsafe gating"
 msgstr "성인 콘텐츠 또는 안전하지 않은 콘텐츠 차단"
 
@@ -19195,7 +19175,7 @@ msgid "Mature content policy violation"
 msgstr "성인 콘텐츠 정책 위반"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:243
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:217
 msgid "Mature content without proper gating."
 msgstr "적절한 제한이 없는 성인용 콘텐츠입니다."
 
@@ -19250,7 +19230,7 @@ msgid "Maximum protection for family-friendly spaces"
 msgstr "가족 친화적인 공간을 위한 최고의 보호"
 
 #. Settings search entry description for the AV1 and H.265 screen-share opt-in toggles.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:99
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:97
 msgid "May cause compatibility issues for viewers. We’re working on improving this."
 msgstr "시청자에게 호환성 문제가 발생할 수 있습니다. 개선 중입니다."
 
@@ -19500,7 +19480,7 @@ msgid "Members without the {readMessageHistoryPermissionLabel} permission can vi
 msgstr "{readMessageHistoryPermissionLabel} 권한이 없는 멤버는 이 날짜 이후에 전송된 메시지를 볼 수 있습니다."
 
 #. Short label in the app layout channel list content.
-#: src/features/app/components/layout/ChannelListContent.tsx:87
+#: src/features/app/components/layout/ChannelListContent.tsx:88
 msgid "Members, selected"
 msgstr "멤버 선택됨"
 
@@ -19658,7 +19638,7 @@ msgid "Message buttons"
 msgstr "메시지 버튼"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:47
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:43
 msgid "Message character limit"
 msgstr "메시지 글자 수 제한"
 
@@ -19808,11 +19788,6 @@ msgstr "DM 목록의 메시지 미리보기"
 msgid "Message record"
 msgstr "메시지 기록"
 
-#. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:31
-msgid "Message scheduling"
-msgstr "메시지 예약"
-
 #. Short label in the buttons tab. Keep it concise.
 #: src/features/user/components/modals/tabs/component_gallery_tab/ComponentGalleryTabButtonsTab.tsx:77
 msgid "Message sent."
@@ -19923,17 +19898,17 @@ msgstr "마이크 테스트"
 
 #. Fallback microphone label in the voice settings menu when the OS does not report a device name.
 #. Fallback microphone option label when the operating system does not report a device name.
+#. Screen-share audio summary on a video device share whose audio comes from an unnamed microphone.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#. Summary label in the Linux audio source picker on a video device share, where the default is the microphone rather than the system mix.
 #: src/features/user/components/settings_utils/section_registry/VoiceVideoSections.ts:21
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:44
 #: src/features/voice/components/VoiceSettingsMenus.tsx:78
+#: src/features/voice/utils/ScreenShareAudioSummary.ts:40
 #: src/features/voice/utils/SettingsDeviceOptions.ts:15
 msgid "Microphone"
 msgstr "마이크"
 
-#. Capture option in the Linux audio source picker on a video device share. {deviceLabel} is the selected audio input device name.
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:49
+#. Screen-share audio summary on a video device share. {deviceLabel} is the name of the selected audio input device.
+#: src/features/voice/utils/ScreenShareAudioSummary.ts:44
 msgid "Microphone ({deviceLabel})"
 msgstr "마이크({deviceLabel})"
 
@@ -19943,7 +19918,7 @@ msgid "Microphone access was denied. Enable it in your system settings and try a
 msgstr "마이크 접근이 거부되었습니다. 시스템 설정에서 활성화한 후 다시 시도해 주세요."
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:58
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:56
 msgid "Microphone gain"
 msgstr "마이크 증폭"
 
@@ -20010,7 +19985,7 @@ msgid "Minimum lifetime (days)"
 msgstr "최소 수명(일)"
 
 #. IAR modal: rule-category description for the child-safety / mature-content group.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:70
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:52
 msgid "Minors at risk, mature content in the wrong place, or unwanted conduct."
 msgstr "미성년자 위험 노출, 부적절한 성인 콘텐츠, 원치 않는 행위."
 
@@ -20274,7 +20249,7 @@ msgstr "정확도순"
 #. Short label in the inline. Keep it concise.
 #: src/features/user/components/modals/tabs/accessibility_tab/AccessibilityTabInline.tsx:31
 #: src/features/user/components/modals/tabs/AccessibilityTab.tsx:98
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:151
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:148
 #: src/features/user/components/settings_utils/search_index/AccessibilityIndex.ts:297
 #: src/features/user/components/settings_utils/section_registry/AccessibilitySections.ts:271
 msgid "Motion"
@@ -20383,7 +20358,7 @@ msgstr "다단계 인증"
 #. Short label in the markdown tab. Keep it concise.
 #: src/features/user/components/modals/tabs/component_gallery_tab/MarkdownTab.tsx:57
 msgid "Multi-line"
-msgstr "Multi-line"
+msgstr "여러 줄"
 
 #. Discovery category dropdown option in the community Discovery settings tab.
 #: src/features/guild/components/modals/guild_tabs/GuildDiscoveryTab.tsx:80
@@ -20513,7 +20488,7 @@ msgid "Mute entrance sound"
 msgstr "입장 효과음 끄기"
 
 #. Action label that mutes notifications for the favourites pseudo-guild.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:687
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:683
 msgid "Mute favourites"
 msgstr "즐겨찾기 알림 끄기"
 
@@ -20931,7 +20906,7 @@ msgstr "신규"
 #. Compact badge shown beside recently added settings.
 #: src/features/user/components/settings_utils/SettingsStatusBadge.tsx:14
 msgid "NEW"
-msgstr "NEW"
+msgstr "신규"
 
 #. Description text in the new account guild limit modal.
 #: src/features/guild/components/alerts/NewAccountGuildLimitModal.tsx:12
@@ -20998,13 +20973,13 @@ msgstr "새 메시지"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #. Short label in the app layout channel list content.
-#: src/features/app/components/layout/ChannelListContent.tsx:91
+#: src/features/app/components/layout/ChannelListContent.tsx:92
 #: src/features/user/components/settings_utils/section_registry/AccessibilitySections.ts:147
 msgid "New messages"
 msgstr "새 메시지"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:22
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:20
 msgid "New microphone"
 msgstr "새 마이크"
 
@@ -21060,7 +21035,7 @@ msgstr "최신순"
 #. Primary button in the required-action modal. Moves to the next carousel step.
 #: src/features/app/components/setup/SelfHostedSetupWizardGate.tsx:79
 #: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:154
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:715
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:711
 msgid "Next"
 msgstr "다음"
 
@@ -21150,7 +21125,7 @@ msgstr "고급 설정이 없습니다"
 msgid "No AFK channel"
 msgstr "AFK 채널 없음"
 
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:120
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:124
 msgid "No application windows found"
 msgstr "애플리케이션 창을 찾을 수 없습니다"
 
@@ -21163,8 +21138,8 @@ msgstr "아직 신청 내역이 없어요"
 msgid "No assets yet"
 msgstr "아직 에셋이 없습니다"
 
-#. Summary label in the Linux audio source picker when no audio sources are selected.
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:27
+#. Screen-share audio summary shown when the share publishes no audio at all.
+#: src/features/voice/utils/ScreenShareAudioSummary.ts:20
 msgid "No audio"
 msgstr "오디오 없음"
 
@@ -21282,11 +21257,6 @@ msgstr "일치하는 사용자 지정 단축키가 없습니다."
 msgid "No custom shortcuts yet."
 msgstr "아직 맞춤 단축키가 없습니다."
 
-#. Generic short empty-state body shown when an entity has no description set.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:651
-msgid "No description provided."
-msgstr "설명 없음."
-
 #. Empty-state text in the discovery guild card.
 #. Empty-state text shown in the Discovery community preview modal when a community has no description.
 #: src/features/discovery/components/modals/DiscoveryGuildPreviewModal.tsx:30
@@ -21299,7 +21269,7 @@ msgstr "설명 없음."
 msgid "No desktop update is available."
 msgstr "사용 가능한 데스크톱 업데이트가 없습니다."
 
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:126
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:130
 msgid "No displays found"
 msgstr "디스플레이를 찾을 수 없습니다"
 
@@ -21307,7 +21277,7 @@ msgstr "디스플레이를 찾을 수 없습니다"
 msgid "No email address set"
 msgstr "이메일 주소가 설정되지 않았습니다"
 
-#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:285
+#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:284
 msgid "No embeds returned"
 msgstr "반환된 임베드 없음"
 
@@ -21444,7 +21414,7 @@ msgstr "이 인스턴스에서는 선택적 서비스를 사용할 수 없습니
 #. Body copy under the nothing-to-search-for heading. Preserve {query}; it is the text the user submitted and is inserted by code.
 #: src/features/channel/components/channel_search_results/ChannelSearchResultsShared.tsx:86
 msgid "No part of {query} could be applied. Fix the underlined value or add something to search for."
-msgstr "'{query}'에 해당하는 항목을 찾을 수 없습니다. 밑줄 친 값을 수정하거나 검색할 내용을 추가하세요."
+msgstr "{query}에 해당하는 항목을 찾을 수 없습니다. 밑줄 친 값을 수정하거나 검색할 내용을 추가하세요."
 
 #: src/features/user/components/modals/tabs/account_security_tab/AccountTab.tsx:189
 msgid "No password set"
@@ -21739,7 +21709,7 @@ msgstr "움직이지 않는 이모티콘 ({emojiCount})"
 #: src/features/user/components/modals/tabs/components/EntranceSoundSection.tsx:143
 #: src/features/user/components/modals/tabs/privacy_safety_tab/data_request_modal/DataRequestModal.tsx:219
 #: src/features/user/components/modals/tabs/UserVoiceTab.tsx:93
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:242
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:257
 msgid "None"
 msgstr "없음"
 
@@ -21893,7 +21863,7 @@ msgstr "알림 소리 크기"
 #. Generic section header / tab label for the notifications area.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/app/components/layout/MobileBottomNav.tsx:136
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:699
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:695
 #: src/features/notification/components/pages/NotificationsPage.tsx:61
 #: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedSettingsCategories.ts:18
 #: src/features/user/components/settings_utils/section_registry/NotificationsSections.ts:30
@@ -21963,7 +21933,7 @@ msgstr "사물"
 #: src/features/channel/components/modals/channel_tabs/channel_overview_tab/SlowmodeControl.tsx:24
 #: src/features/guild/components/modals/guild_tabs/GuildModerationTab.tsx:97
 #: src/features/guild/components/modals/guild_tabs/GuildModerationTab.tsx:139
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:131
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:128
 msgid "Off"
 msgstr "해제"
 
@@ -22090,7 +22060,7 @@ msgstr "와이드 스크린에만 적용됩니다."
 msgid "Only credit cards are accepted. Debit and prepaid cards cannot be used for the mature content check."
 msgstr "신용카드만 사용할 수 있습니다. 성인 콘텐츠 확인을 위해 직불카드 및 선불카드는 사용할 수 없습니다."
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:975
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:1016
 msgid "Only default speakers"
 msgstr "기본 스피커만 사용"
 
@@ -22138,7 +22108,7 @@ msgstr "여기에서 실행하는 코드가 어떤 동작을 하는지 정확히
 msgid "Only show message previews for DMs with unread messages"
 msgstr "읽지 않은 메시지가 있는 DM에 대해서만 메시지 미리보기 표시"
 
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:965
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:1006
 msgid "Only speakers"
 msgstr "스피커만"
 
@@ -22187,7 +22157,7 @@ msgstr "불투명도"
 #: src/features/app/components/dialogs/components/plutonium/InvoiceList.tsx:21
 #: src/features/app/components/dialogs/components/plutonium/InvoiceList.tsx:159
 #: src/features/app/components/setup/SetupWizardSteps.tsx:154
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:455
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:429
 #: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedSettingRow.tsx:22
 msgid "Open"
 msgstr "열기"
@@ -22247,7 +22217,7 @@ msgstr "@{displayName}님 열기"
 msgid "Open advanced media settings"
 msgstr "고급 미디어 설정을 엽니다"
 
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:123
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:127
 msgid "Open an application window, then try again."
 msgstr "애플리케이션 창을 열고 다시 시도하세요."
 
@@ -22310,7 +22280,7 @@ msgid "Open browser"
 msgstr "브라우저 열기"
 
 #. Primary button in the screen-share picker on web. Hands off to the browser's native getDisplayMedia picker.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:203
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:207
 msgid "Open browser picker"
 msgstr "브라우저 선택기 열기"
 
@@ -22578,7 +22548,7 @@ msgid "Open system DM"
 msgstr "시스템 DM 열기"
 
 #. Primary button in the screen-share picker on Linux/Wayland. Hands off to the OS xdg-desktop-portal picker.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:208
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:212
 msgid "Open system picker"
 msgstr "시스템 선택기 열기"
 
@@ -22587,7 +22557,7 @@ msgid "Open template JSON"
 msgstr "템플릿 JSON 열기"
 
 #. IAR modal: quick-action card description for banning the reported user.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:151
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:125
 msgid "Open the ban dialog for this community."
 msgstr "이 커뮤니티의 차단 대화 상자를 엽니다."
 
@@ -22654,12 +22624,12 @@ msgid "Open your browser, sign in, then enter the code below to link your accoun
 msgstr "브라우저를 열고 로그인한 다음 아래 코드를 입력하여 계정을 연결하세요."
 
 #. Required-action modal carousel step title for the first inbound phone verification instruction.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:330
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:429
 msgid "Open your messages"
 msgstr "메시지 열기"
 
 #. Required-action modal body for the first inbound phone verification instruction.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:334
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:433
 msgid "Open your phone messaging app and start a new text message."
 msgstr "휴대폰 메시지 앱을 열고 새 문자 메시지를 시작하세요."
 
@@ -22673,17 +22643,17 @@ msgid "Open your settings"
 msgstr "설정 열기"
 
 #. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:123
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:121
 msgid "OpenH264 software codec on Linux"
 msgstr "Linux의 OpenH264 소프트웨어 코덱"
 
 #. Settings search entry label. Names the settings search entry in the settings UI.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:111
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:109
 msgid "OpenH264 video codec"
 msgstr "OpenH264 비디오 코덱 열기"
 
 #. Switch label for the OpenH264 codec toggle. "OpenH264" is a product name and "Cisco Systems, Inc." is a company name; do not translate either.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:42
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:39
 msgid "OpenH264 Video Codec provided by Cisco Systems, Inc."
 msgstr "Cisco Systems, Inc.에서 제공하는 OpenH264 비디오 코덱."
 
@@ -22825,8 +22795,13 @@ msgstr "다른 이모티콘…"
 msgid "OTP"
 msgstr "OTP"
 
+#. Required-action form error when our own phone lookup provider is unavailable and we fail closed. Must blame us, not the number, and must invite retrying the same number.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:537
+msgid "Our phone number check is down right now. This is on us, not your number. Wait a few minutes and try the same number again."
+msgstr "전화번호 확인 시스템에 일시적으로 문제가 발생했습니다. 고객님의 번호가 아닌 저희 시스템 문제입니다. 몇 분 후에 같은 번호로 다시 시도해 주세요."
+
 #. IAR modal: body copy on the success step shown after a platform report is submitted. Reassures the user about follow-up.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:122
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:96
 msgid "Our safety team is reviewing it. We'll send you a DM and email once we've reached a verdict."
 msgstr "안전팀에서 검토 중입니다. 결정이 내려지면 DM과 이메일로 알려드릴게요."
 
@@ -23127,7 +23102,7 @@ msgid "Pause invites? New users won't be able to join through invite links until
 msgstr "초대 일시 중지? 다시 사용 설정할 때까지 새 사용자는 초대 링크를 통해 참여할 수 없습니다. 기존 멤버에게는 영향을 미치지 않습니다."
 
 #. Short label for an advanced screen-share preview preference.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:47
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:44
 msgid "Pause my screen share preview in the background"
 msgstr "백그라운드에서 화면 공유 미리보기 일시 중지"
 
@@ -23238,7 +23213,7 @@ msgid "Per-community profiles"
 msgstr "커뮤니티별 프로필"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:34
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:32
 msgid "Per-device volume"
 msgstr "기기별 볼륨"
 
@@ -23341,7 +23316,7 @@ msgid "PgUp"
 msgstr "Page Up"
 
 #. IAR modal: rule-category description for the scams / malware / misinformation group.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:86
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:68
 msgid "Phishing, fraud, malicious links, or false claims likely to cause real-world harm."
 msgstr "피싱, 사기, 악성 링크 또는 실제 피해를 유발할 수 있는 허위 주장."
 
@@ -23367,7 +23342,7 @@ msgid "Phone number is required"
 msgstr "전화번호를 입력해주세요"
 
 #. Toast shown after phone verification succeeds.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:366
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:465
 #: src/features/user/components/modals/PhoneAddModal.tsx:179
 #: src/features/user/components/modals/PhoneAddModal.tsx:184
 msgid "Phone number verified"
@@ -23384,7 +23359,7 @@ msgid "Phone step"
 msgstr "전화번호 단계"
 
 #. Required-action error when the account is not eligible to add phone verification.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:422
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:521
 msgid "Phone verification is not available for this account. Use another method or contact support."
 msgstr "이 계정에서는 전화 인증을 사용할 수 없습니다. 다른 방법을 사용하거나 지원팀에 문의하세요."
 
@@ -23408,11 +23383,6 @@ msgstr "이미지 검색 서비스 선택"
 msgid "Pick a theme on the left to edit its name, metadata, and CSS. Or import a new one."
 msgstr "왼쪽에서 테마를 선택하여 이름, 메타데이터, CSS를 편집하거나 새 테마를 가져오세요."
 
-#. Helper text in the schedule-message modal explaining the action.
-#: src/features/messaging/components/modals/ScheduleMessageModal.tsx:19
-msgid "Pick a time when this message should be posted."
-msgstr "메시지를 보낼 시간을 선택하세요."
-
 #. Title of the picker modal when choosing a translation provider.
 #: src/features/search/components/modals/SearchProviderPickerModal.tsx:23
 msgid "Pick a translation provider"
@@ -23424,7 +23394,7 @@ msgid "Pick a web search provider"
 msgstr "웹 검색 공급자 선택"
 
 #. Validation hint in the IAR modal when the user tries to advance without picking a radio option.
-#: src/features/moderation/components/report_modal/IARModal.tsx:73
+#: src/features/moderation/components/report_modal/IARModal.tsx:70
 msgid "Pick an option to continue."
 msgstr "계속하려면 옵션을 선택하세요."
 
@@ -23443,20 +23413,13 @@ msgstr "사전 하나 이상을 선택하세요. 선택된 사전의 단어는 �
 msgid "Pick the appearance this administrator account should start with."
 msgstr "이 관리자 계정의 시작 모양을 선택하세요."
 
-#. Settings search entry label. Names an advanced screen-share audio setting in the settings UI.
-#. Switch label for the advanced opt-in that reveals a manual per-application audio source picker in the stream settings menu.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:195
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:127
-msgid "Pick the apps to capture audio from"
-msgstr "캡처할 앱의 오디오를 선택하세요"
-
 #. Required-action modal body for choosing a verification method.
 #: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:236
 msgid "Pick the method you can complete now."
 msgstr "지금 완료할 수 있는 방법을 선택하세요."
 
 #. Validation hint in the IAR modal on the rule selection step.
-#: src/features/moderation/components/report_modal/IARModal.tsx:77
+#: src/features/moderation/components/report_modal/IARModal.tsx:74
 msgid "Pick the rule to review."
 msgstr "검토할 규칙을 선택하세요."
 
@@ -23481,7 +23444,7 @@ msgid "Picture"
 msgstr "사진"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:160
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:133
 msgid "Picture in picture"
 msgstr "화면 속 화면"
 
@@ -23556,7 +23519,7 @@ msgid "pinned"
 msgstr "고정됨"
 
 #. Generic short toast / status label confirming a DM was pinned.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:655
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:651
 msgid "Pinned DM"
 msgstr "고정된 DM"
 
@@ -23601,7 +23564,7 @@ msgid "Pins popout"
 msgstr "핀 팝업"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:164
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:137
 msgid "PiP"
 msgstr "PIP"
 
@@ -23803,7 +23766,7 @@ msgid "Prefer @mention"
 msgstr "@멘션 선호"
 
 #. Option label for an encoder path select. Refers to hardware video encoders.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:71
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:68
 msgid "Prefer hardware"
 msgstr "하드웨어 선호"
 
@@ -23815,7 +23778,7 @@ msgid "Prefer no @mention"
 msgstr "@멘션 안 함"
 
 #. Option label for an encoder path select. Refers to software video encoders.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:75
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:72
 msgid "Prefer software"
 msgstr "소프트웨어 선호"
 
@@ -23835,7 +23798,7 @@ msgid "Preferences..."
 msgstr "환경설정..."
 
 #. Accessible label for the advanced screen-share codec preference select.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:168
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:165
 msgid "Preferred screen share codec"
 msgstr "화면 공유 시 선호하는 코덱"
 
@@ -23935,7 +23898,7 @@ msgid "press to remove reaction"
 msgstr "눌러서 반응 삭제"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:335
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:309
 msgid "Pretending to be someone else, including deceptive AI-generated content."
 msgstr "다른 사람을 사칭하거나 기만적인 AI 생성 콘텐츠를 사용하는 행위."
 
@@ -23954,7 +23917,7 @@ msgstr "멤버가 메시지 전송, 반응, 음성 채팅 참여를 일정 기�
 
 #: src/features/expressions/components/modals/sticker_form/StickerPreview.tsx:16
 #: src/features/guild/components/modals/guild_tabs/guild_overview_tab/fields/GuildInviteSplashSettingsField.tsx:45
-#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:277
+#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:276
 msgid "Preview"
 msgstr "미리 보기"
 
@@ -23982,17 +23945,17 @@ msgid "Preview hidden"
 msgstr "미리보기 숨김"
 
 #. Privacy explanation for screen-share previews in a one-to-one DM call. productName is the app name. Refers to preview thumbnail images generated from a screen share.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:310
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:314
 msgid "Preview images are stored by {productName} temporarily for delivery and are not end-to-end encrypted. Disable previews if you do not want screen-share frames uploaded for thumbnails."
 msgstr "미리보기 이미지는 {productName}에 의해 일시적으로 저장되어 전송되며, 종단 간 암호화되지는 않습니다. 미리보기 이미지 생성을 비활성화하면 화면 공유 프레임이 섬네일로 업로드되지 않습니다."
 
 #. Privacy explanation for screen-share previews in a group DM call. productName is the app name. Refers to preview thumbnail images generated from a screen share.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:304
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:308
 msgid "Preview images are stored by {productName} temporarily for delivery and are not end-to-end encrypted. People in this group DM do not need to be actively watching your stream to see the thumbnail."
 msgstr "{productName}에서 미리보기 이미지를 일시적으로 저장하여 전송하며, 종단 간 암호화되지는 않습니다. 이 그룹 DM의 사용자는 스트림을 적극적으로 시청하지 않아도 미리보기를 볼 수 있습니다."
 
 #. Privacy explanation for screen-share previews in a guild voice channel. productName is the app name. Refers to preview thumbnail images generated from a screen share.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:298
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:302
 msgid "Preview images are stored by {productName} temporarily for delivery and are not end-to-end encrypted. People still need permission to connect, but they do not need to be actively watching your stream."
 msgstr "미리보기 이미지는 {productName}에 의해 일시적으로 저장되어 전송되며 종단 간 암호화되지는 않습니다. 사용자는 여전히 연결 권한이 필요하지만 스트림을 적극적으로 시청할 필요는 없습니다."
 
@@ -24009,7 +23972,7 @@ msgid "Preview sound"
 msgstr "사운드 미리 듣기"
 
 #. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:172
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:145
 msgid "Preview, popout, and stream thumbnail behavior"
 msgstr "미리보기, 팝업 및 스트림 섬네일 동작 설정"
 
@@ -24127,7 +24090,7 @@ msgid "Privacy"
 msgstr "개인정보 보호"
 
 #. IAR modal: rule-category label grouping privacy violations and impersonation.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:74
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:56
 msgid "Privacy or impersonation"
 msgstr "개인 정보 또는 사칭"
 
@@ -24137,7 +24100,7 @@ msgid "Privacy policy"
 msgstr "개인정보처리방침"
 
 #. Generic section heading / button label for the privacy settings area.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:663
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:659
 msgid "Privacy settings"
 msgstr "개인 정보 보호 설정"
 
@@ -24147,17 +24110,17 @@ msgid "Privacy URL"
 msgstr "개인정보처리방침 URL"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:307
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:281
 msgid "Privacy violation"
 msgstr "개인정보 침해"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:319
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:293
 msgid "Privacy violation or doxxing"
 msgstr "개인 정보 침해 또는 신상 털이"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:315
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:289
 msgid "Privacy violation or stalking"
 msgstr "사생활 침해 또는 스토킹"
 
@@ -24203,7 +24166,7 @@ msgid "Profile"
 msgstr "프로필"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:35
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:31
 msgid "Profile badge"
 msgstr "프로필 뱃지"
 
@@ -24314,22 +24277,22 @@ msgid "Profile updated"
 msgstr "프로필 업데이트 완료"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:343
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:317
 msgid "Profile, username, or avatar violation"
 msgstr "프로필, 사용자 이름 또는 아바타 위반"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:203
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:177
 msgid "Promotes hatred against protected groups."
 msgstr "보호 대상 집단에 대한 증오 조장."
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:219
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:193
 msgid "Promotes, recruits for, or coordinates violent extremist activity."
 msgstr "폭력적인 극단주의 활동을 조장, 모집 또는 조정합니다."
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:371
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:345
 msgid "Promotion or instructions encouraging self-harm or eating disorders."
 msgstr "자해 또는 섭식 장애를 조장하거나 지시하는 내용."
 
@@ -24339,7 +24302,7 @@ msgid "Prompt"
 msgstr "프롬프트"
 
 #. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:26
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:24
 msgid "Prompt for new audio devices"
 msgstr "새 오디오 장치 프롬프트"
 
@@ -24582,7 +24545,7 @@ msgid "Push-to-talk won't unmute your microphone while you're deafened. Undeafen
 msgstr "음성 채팅 단축키를 누르면 음소거 상태에서는 마이크가 켜지지 않습니다. 대화하려면 음소거를 해제하세요."
 
 #. Option label for a software encoder quality select. Means slower/higher-quality.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:95
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:92
 msgid "Quality"
 msgstr "품질"
 
@@ -24675,7 +24638,7 @@ msgstr "라디오 그룹"
 
 #. IAR modal: rule label.
 #. Report category label for a community coordinating raids (mass harassment of other communities or users). "Raid" is product jargon.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:359
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:333
 #: src/features/moderation/components/report/OptionDescriptors.ts:94
 msgid "Raid coordination"
 msgstr "레이드 조율"
@@ -24690,12 +24653,12 @@ msgstr "평가하기"
 msgid "Rate limited"
 msgstr "속도 제한됨"
 
-#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:293
+#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:292
 msgid "Raw embed JSON"
 msgstr "원시 임베드 JSON"
 
 #. Description for the high-tier Screen share streaming preset (Plutonium). Source resolution and frame rate are technical tokens.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:82
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:87
 msgid "Razor-sharp text at native source, 15 FPS"
 msgstr "원본 화질 텍스트, 15 FPS"
 
@@ -24707,7 +24670,7 @@ msgstr "{0}님을 다시 활성화했습니다."
 #. Button label that discards the current recording and restarts.
 #: src/features/voice/components/VoiceMessageComposerModal.tsx:72
 msgid "Re-record"
-msgstr "Re-record"
+msgstr "다시 녹음"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/user/components/settings_utils/section_registry/ChatSettingsSections.ts:14
@@ -24721,7 +24684,7 @@ msgstr "{emojiShortcode}로 공감하기"
 
 #. Generic short section / tab / aria label for emoji reactions.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:659
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:655
 #: src/features/messaging/components/modals/MessageReactionsModal.tsx:144
 #: src/features/user/components/settings_utils/section_registry/ChatSettingsSections.ts:10
 msgid "Reactions"
@@ -24785,7 +24748,7 @@ msgid "Ready to upgrade?"
 msgstr "업그레이드할 준비가 되셨나요?"
 
 #. Option label for a software encoder quality select. Means fastest/lower-latency.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:87
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:84
 msgid "Realtime"
 msgstr "실시간"
 
@@ -25024,7 +24987,7 @@ msgstr "참조가 복사되었습니다."
 msgid "Referral parameters"
 msgstr "추천 매개변수"
 
-#: src/features/voice/components/AudioSourcePickerLinux.tsx:285
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:301
 msgid "Refresh audio sources"
 msgstr "오디오 소스 새로고침"
 
@@ -25376,7 +25339,7 @@ msgid "Remove icon"
 msgstr "아이콘 삭제"
 
 #. IAR modal: quick-action card description for deleting the reported message.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:131
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:105
 msgid "Remove it from the channel for everyone."
 msgstr "모든 사람에게서 채널에서 제거합니다."
 
@@ -25730,13 +25693,8 @@ msgstr "커뮤니티 신고"
 msgid "Report a message"
 msgstr "메시지 신고하기"
 
-#. IAR modal: primary path label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:110
-msgid "Report a platform rule violation"
-msgstr "플랫폼 정책 위반 신고"
-
 #. IAR modal: screen-reader description for the whole modal.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:467
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:441
 msgid "Report a rule violation, or find tools to manage contact and preferences."
 msgstr "규칙 위반을 신고하거나 연락처 및 환경설정 관리 도구를 찾아보세요."
 
@@ -25773,15 +25731,10 @@ msgid "Report message"
 msgstr "메시지 신고"
 
 #. IAR modal: title on the success step shown after a platform report is submitted.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:118
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:92
 #: src/features/moderation/components/report/ReportStepComplete.tsx:31
 msgid "Report sent"
 msgstr "신고 완료"
-
-#. IAR modal: community-mod path label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:114
-msgid "Report to the moderators of this community"
-msgstr "이 커뮤니티의 관리자에게 신고"
 
 #. Button or menu action label in the moderation report step selection. Keep it concise. Keep the tone plain and specific.
 #: src/features/moderation/components/report/ReportStepSelection.tsx:11
@@ -25809,7 +25762,7 @@ msgid "reposts"
 msgstr "다시 게시"
 
 #. Required-action form error when the user submits before a code exists.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:378
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:477
 msgid "Request a new code first."
 msgstr "먼저 새 코드를 요청하세요."
 
@@ -25929,11 +25882,6 @@ msgstr "전화번호 인증이 필요합니다."
 #: src/features/guild/components/modals/guild_tabs/GuildModerationTab.tsx:79
 msgid "Requires everything in medium, plus being a member of the community for at least 10 minutes."
 msgstr "중간 수준의 모든 조건과 더불어, 커뮤니티 멤버로 10분 이상 활동해야 합니다."
-
-#. Title of the confirmation alert shown when editing a scheduled message to change the scheduled time.
-#: src/features/channel/components/channel_textarea/shared.ts:24
-msgid "Reschedule message"
-msgstr "메시지 재예약"
 
 #: src/features/auth/components/modals/BackupCodesViewModal.tsx:200
 #: src/features/auth/components/modals/ClaimAccountModal.tsx:240
@@ -26305,7 +26253,7 @@ msgstr "창 크기 조절, 최대화, 창 스냅은 컴포지터에 따라 달�
 #. Section header in the stream settings menu for resolution options.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/user/components/settings_utils/section_registry/VoiceVideoSections.ts:201
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:120
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:125
 msgid "Resolution"
 msgstr "해상도"
 
@@ -26399,11 +26347,6 @@ msgstr "로그인으로 돌아가기"
 #: src/features/user/components/settings_utils/section_registry/ChatSettingsSections.ts:62
 msgid "Reveal"
 msgstr "보기"
-
-#. Accessible label for a blurred emoji button. Activating it reveals the emoji when allowed.
-#: src/features/app/components/shared/MatureEmojiWrapper.tsx:13
-msgid "Reveal sensitive emoji"
-msgstr "선정적인 이모티콘 보기"
 
 #. Short label in the shared app spoiler overlay.
 #: src/features/app/components/shared/SpoilerOverlay.tsx:11
@@ -26894,7 +26837,7 @@ msgstr "저장됨"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:59
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:55
 #: src/features/user/components/settings_utils/search_index/ChatSettingsIndex.ts:63
 msgid "Saved media"
 msgstr "저장된 미디어"
@@ -26929,7 +26872,7 @@ msgid "Scale"
 msgstr "크기"
 
 #. IAR modal: rule-category label grouping spam/scams, malware, and harmful misinformation.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:82
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:64
 msgid "Scams, malware, or misinformation"
 msgstr "사기, 멀웨어 또는 잘못된 정보"
 
@@ -26937,25 +26880,10 @@ msgstr "사기, 멀웨어 또는 잘못된 정보"
 msgid "Scan the QR code with your authenticator app."
 msgstr "인증 앱으로 QR 코드를 스캔하세요."
 
-#. Confirm button label in the schedule-message modal that saves the scheduled send.
-#: src/features/messaging/components/modals/ScheduleMessageModal.tsx:36
-msgid "Schedule"
-msgstr "예약"
-
-#. Title of the schedule-message modal.
-#: src/features/messaging/components/modals/ScheduleMessageModal.tsx:15
-msgid "Schedule message"
-msgstr "메시지 예약"
-
 #. Developer / debug surface — keep terse and technical. Label in the developer Nagbar controls panel for the scheduled-maintenance banner.
 #: src/features/devtools/components/NagbarControls.ts:22
 msgid "Scheduled maintenance nagbar"
 msgstr "예정된 점검 알림바"
-
-#. Inline validation message in the schedule-message modal when the picked time is more than 30 days away. Keep tone plain.
-#: src/features/messaging/components/modals/ScheduleMessageModal.tsx:31
-msgid "Scheduled messages can be at most 30 days in the future."
-msgstr "메시지 예약은 최대 30일 후까지만 가능합니다."
 
 #. Discovery category dropdown option in the community Discovery settings tab.
 #: src/features/guild/components/modals/guild_tabs/GuildDiscoveryTab.tsx:92
@@ -27002,7 +26930,7 @@ msgstr "화면 녹화 권한 필요"
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #. Streaming preset label in the stream settings menu. Optimized for sharp text in screen shares.
 #: src/features/user/components/settings_utils/section_registry/VoiceVideoSections.ts:217
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:78
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:83
 msgid "Screen share"
 msgstr "화면 공유"
 
@@ -27017,22 +26945,22 @@ msgid "Screen share audio boost"
 msgstr "화면 공유 오디오 증폭"
 
 #. Error modal title shown when the selected native screen-share audio route cannot start safely.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:171
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:175
 msgid "Screen share audio couldn't start"
 msgstr "화면 공유 오디오를 시작할 수 없습니다."
 
 #. Settings search entry label. Names the settings search entry in the settings UI.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:70
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:68
 msgid "Screen share codec"
 msgstr "화면 공유 코덱"
 
 #. Settings search entry label. Names the settings search entry in the settings UI.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:176
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:149
 msgid "Screen share encoder controls"
 msgstr "화면 공유 인코더 컨트롤"
 
 #. Title of a modal shown when an active screen share stops unexpectedly.
-#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:102
+#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:104
 msgctxt "screen-share"
 msgid "Screen share ended"
 msgstr "화면 공유가 종료되었습니다"
@@ -27048,27 +26976,27 @@ msgid "Screen share is using software encoding ({codec}). Quality may be reduced
 msgstr "화면 공유에서 소프트웨어 인코딩({codec})을 사용하고 있습니다. 화질이 저하되고 CPU 사용량이 증가할 수 있습니다. GPU가 이 코덱에 대한 하드웨어 인코딩을 지원하지 않을 수 있습니다."
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:156
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:129
 msgid "Screen share preview"
 msgstr "화면 공유 미리보기"
 
 #. Settings search entry label. Names the settings search entry in the settings UI.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:152
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:125
 msgid "Screen share preview behavior"
 msgstr "화면 공유 미리보기 동작"
 
 #. Title of an informational modal explaining screen-share preview frame uploads.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:276
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:280
 msgid "Screen share previews"
 msgstr "화면 공유 미리보기"
 
 #. Compact footer status in the screen-share picker when preview frame uploads are disabled.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:264
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:268
 msgid "Screen share previews are disabled."
 msgstr "화면 공유 미리보기가 비활성화되었습니다."
 
 #. Compact footer status in the screen-share picker when preview frame uploads are enabled.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:260
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:264
 msgid "Screen share previews are enabled."
 msgstr "화면 공유 미리보기가 활성화되었습니다."
 
@@ -27114,7 +27042,7 @@ msgid "Screen sharing"
 msgstr "화면 공유"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:74
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:72
 msgid "Screen sharing codec"
 msgstr "화면 공유 코덱"
 
@@ -27149,7 +27077,7 @@ msgid "Screen sharing quality"
 msgstr "화면 공유 품질"
 
 #. Footer summary label for the text-focused screen-share quality preset.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:228
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:232
 msgid "Screenshare"
 msgstr "화면 공유"
 
@@ -27621,7 +27549,7 @@ msgstr "미리보기 요청"
 
 #. Hover action on a device card that selects the device without starting the stream.
 #: src/features/app/components/dialogs/components/PricingCard.tsx:65
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:195
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:199
 msgid "Select"
 msgstr "선택"
 
@@ -27812,7 +27740,7 @@ msgstr "선택 항목"
 
 #. IAR modal: rule label.
 #. Report category label for content that promotes or depicts self-harm or suicide. Keep tone calm and respectful; this is a safety surface.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:367
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:341
 #: src/features/moderation/components/report/OptionDescriptors.ts:52
 msgid "Self-harm or suicide"
 msgstr "자해 또는 자살"
@@ -27962,7 +27890,7 @@ msgid "Send messages disabled"
 msgstr "메시지 전송 비활성화됨"
 
 #. Footer submit button in the IAR modal. Sends the report to the safety team.
-#: src/features/moderation/components/report_modal/IARModal.tsx:93
+#: src/features/moderation/components/report_modal/IARModal.tsx:90
 msgid "Send report"
 msgstr "보고서 보내기"
 
@@ -27992,12 +27920,12 @@ msgid "Send the code <0>{0}</0> to <1>{1}</1>"
 msgstr "코드 <0>{0}</0>을(를) <1>{1}</1>님에게 보내기"
 
 #. Required-action modal body for the second inbound phone verification instruction.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:342
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:441
 msgid "Send the code to the phone number below."
 msgstr "아래 전화번호로 코드를 보내주세요."
 
 #. Required-action modal carousel step title for the second inbound phone verification instruction.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:338
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:437
 msgid "Send this code"
 msgstr "코드 전송"
 
@@ -28007,7 +27935,7 @@ msgid "Send this pin back in time?"
 msgstr "이 핀을 과거로 돌려보낼까요?"
 
 #. Label for the destination phone number in an inbound phone verification challenge.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:350
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:449
 msgid "Send to"
 msgstr "다음으로 전송"
 
@@ -28035,7 +27963,7 @@ msgid "Send:"
 msgstr "송신:"
 
 #. Required-action modal explanation for an inbound phone verification challenge due to SMS cost.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:322
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:421
 msgid "Sending an SMS to this number is expensive, so we need you to text us instead."
 msgstr "이 번호로 SMS를 보내는 데 비용이 많이 들기 때문에 대신 문자를 보내주셔야 합니다."
 
@@ -28044,7 +27972,7 @@ msgid "Sending an SMS to this phone number is too expensive for {PRODUCT_NAME}, 
 msgstr "{PRODUCT_NAME}에서 이 전화번호로 SMS를 보내는 비용이 너무 비싸서, 대신 고객님께서 저희에게 SMS를 보내주셔야 합니다. 불편하시겠지만, <0>{SUPPORT_EMAIL}</0>로 문의하여 이 요구 사항을 해제할 수도 있습니다."
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:295
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:269
 msgid "Sending malware or dangerous links"
 msgstr "악성 코드 또는 위험한 링크 전송"
 
@@ -28082,7 +28010,7 @@ msgid "Sensitive media"
 msgstr "민감한 미디어"
 
 #. Generic short status label confirming an item (invite, gift, theme link) was sent.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:803
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:799
 msgid "Sent"
 msgstr "보냄"
 
@@ -28343,6 +28271,18 @@ msgstr "사용자 제한을 {0}으로 설정했습니다."
 msgid "Set the vanity URL to {0}."
 msgstr "커스텀 URL을 {0}으로 설정했습니다."
 
+#. Primary button of the set-aside confirmation in the required-action modal when nothing will be left. Uses the normal button style, not the destructive one.
+#. Secondary button in the required-action modal that restores the deferred phone check instead of verifying a number. Must not read as skipping or circumventing, and must not use back or undo wording, which collides with the modal back button.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:279
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:331
+msgid "Set this check aside"
+msgstr "이 확인을 나중으로 미루기"
+
+#. Confirmation dialog title in the required-action modal when nothing will be left.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:296
+msgid "Set this check aside?"
+msgstr "이 확인을 건너뛸까요?"
+
 #. Title for the self-host setup wizard modal.
 #: src/features/app/components/setup/SelfHostedSetupWizardGate.tsx:71
 msgid "Set up {productName}"
@@ -28471,7 +28411,7 @@ msgid "Share gift"
 msgstr "선물 공유"
 
 #. Hover action on an application or display card that starts sharing that source.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:191
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:195
 msgid "Share screen"
 msgstr "화면 공유"
 
@@ -28481,7 +28421,7 @@ msgid "Share screens and windows."
 msgstr "화면 및 창 공유"
 
 #. Toggle label for sharing audio with an active stream.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:148
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:153
 msgid "Share stream audio"
 msgstr "스트림 오디오 공유"
 
@@ -28508,7 +28448,7 @@ msgid "Share with a friend"
 msgstr "친구에게 공유하기"
 
 #. IAR modal: quick-action card description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:419
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:393
 msgid "Share with community mods."
 msgstr "커뮤니티 운영진과 공유."
 
@@ -28540,8 +28480,18 @@ msgstr "친구와 음성 활동 공유하기"
 msgid "Shared theme"
 msgstr "공유된 테마"
 
+#. Screen-share audio summary shown when a window share captures only the audio of the window it shares.
+#: src/features/voice/utils/ScreenShareAudioSummary.ts:36
+msgid "Shared window"
+msgstr "공유된 창"
+
+#. Capture option in the Linux audio source picker on a window share. Captures only the audio of the window being shared.
+#: src/features/voice/components/AudioSourcePickerLinux.tsx:38
+msgid "Shared window audio"
+msgstr "공유된 창 오디오"
+
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:323
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:297
 msgid "Shares personal info, stalks users, or coordinates privacy abuse."
 msgstr "개인 정보를 공유하거나, 다른 사용자를 스토킹하거나, 개인 정보 침해를 조장합니다."
 
@@ -28551,7 +28501,7 @@ msgid "Sharing personal information"
 msgstr "개인 정보 공유"
 
 #. Description for the free-tier Screen share streaming preset. Resolution and frame rate are technical tokens.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:87
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:92
 msgid "Sharper text at 720p, 30 FPS"
 msgstr "720p, 30 FPS로 더 선명한 텍스트"
 
@@ -28942,7 +28892,7 @@ msgstr "네코 표시"
 #. Settings search entry label. Names the settings search entry in the settings UI.
 #. Short label for an advanced voice device preference.
 #: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVoiceControls.tsx:11
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:10
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:8
 msgid "Show new device alerts"
 msgstr "새 기기 알림 표시"
 
@@ -28979,7 +28929,7 @@ msgid "Show password"
 msgstr "비밀번호 표시"
 
 #. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:46
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:44
 msgid "Show per-device participant volume sliders in voice menus"
 msgstr "음성 메뉴에서 기기별 참가자 볼륨 슬라이더 표시"
 
@@ -29294,7 +29244,7 @@ msgid "Single community mode"
 msgstr "단일 커뮤니티 모드"
 
 #. Option label for an SVC mode select.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:111
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:108
 msgid "Single layer"
 msgstr "단일 레이어"
 
@@ -29514,7 +29464,7 @@ msgid "Slowmode time remaining"
 msgstr "슬로우 모드 남은 시간"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:195
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:169
 msgid "Slurs, dehumanizing language, or attacks on protected groups."
 msgstr "욕설, 비인간적인 언어, 보호 대상 집단에 대한 공격."
 
@@ -29574,12 +29524,12 @@ msgid "Smooth scrolling"
 msgstr "부드러운 스크롤"
 
 #. Footer summary description for the gaming screen-share quality preset.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:236
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:240
 msgid "Smoother video"
 msgstr "더 부드러운 영상"
 
 #. Required-action error when the SMS provider cannot send or verify a code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:418
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:517
 msgid "SMS verification is unavailable right now. Try again later or contact support."
 msgstr "지금은 SMS 인증을 이용할 수 없습니다. 나중에 다시 시도하거나 지원팀에 문의하세요."
 
@@ -29603,12 +29553,12 @@ msgid "Social"
 msgstr "소셜"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:184
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:157
 msgid "Software encoder"
 msgstr "소프트웨어 인코더"
 
 #. Label for an advanced screen-share select. Refers to software video encoder quality bias.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:79
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:76
 msgid "Software encoder quality"
 msgstr "소프트웨어 인코더 품질"
 
@@ -29784,7 +29734,7 @@ msgstr "문제가 발생했습니다. 나중에 다시 시도해 주세요."
 #. Inline error in the web deep-link prompt when opening the desktop app fails.
 #. Toast error shown when the mature content check request fails unexpectedly.
 #: src/features/auth/components/modals/MatureContentCheckModal.tsx:18
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:430
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:564
 #: src/features/auth/flow/DesktopDeepLinkPrompt.tsx:31
 msgid "Something went wrong. Try again."
 msgstr "문제가 발생했습니다. 다시 시도해 주세요."
@@ -29836,7 +29786,7 @@ msgstr "소리 볼륨"
 
 #. Section heading / tab label for the notification-sounds area.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:807
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:803
 #: src/features/user/components/settings_utils/section_registry/NotificationsSections.ts:135
 msgid "Sounds"
 msgstr "소리"
@@ -29851,8 +29801,8 @@ msgstr "소리"
 #. Resolution option in the stream settings menu meaning the original source resolution (no downscale).
 #. Short label in the video tab for the native source resolution option. Keep it concise.
 #: src/features/user/components/modals/tabs/UserVideoTab.tsx:64
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:244
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:100
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:248
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:105
 msgid "Source"
 msgstr "원본"
 
@@ -29914,12 +29864,12 @@ msgid "Spam or scam community"
 msgstr "스팸 또는 사기성 커뮤니티"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:275
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:249
 msgid "Spam, scam, or phishing account"
 msgstr "스팸, 사기 또는 피싱 계정"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:267
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:241
 msgid "Spam, scams, or phishing"
 msgstr "스팸, 사기 또는 피싱"
 
@@ -29934,7 +29884,7 @@ msgid "Spanish (Spain)"
 msgstr "스페인어(스페인)"
 
 #. Option label for an SVC mode select.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:119
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:116
 msgid "Spatial and temporal layers"
 msgstr "공간 및 시간 레이어"
 
@@ -30138,7 +30088,7 @@ msgid "Standard {baseCurrencyLabel} pricing"
 msgstr "표준 {baseCurrencyLabel} 가격"
 
 #. Required-action modal notice for inbound phone verification.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:362
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:461
 msgid "Standard messaging rates from your carrier may apply."
 msgstr "이동통신사의 표준 메시지 요금이 부과될 수 있습니다."
 
@@ -30492,7 +30442,7 @@ msgid "Stop hiding muted channels by default?"
 msgstr "기본적으로 숨겨진 채널 표시를 중단할까요?"
 
 #. IAR modal: quick-action card description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:411
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:385
 msgid "Stop messages and friend requests."
 msgstr "메시지 및 친구 요청 중단."
 
@@ -30507,7 +30457,7 @@ msgid "Stop ringing"
 msgstr "벨 울림 중지"
 
 #. IAR modal: quick-action card description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:439
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:413
 msgid "Stop seeing its content and members."
 msgstr "해당 콘텐츠 및 멤버를 더 이상 보지 않습니다."
 
@@ -30558,7 +30508,7 @@ msgstr "스피커 소리가 마이크로 다시 들어가는 것을 방지합니
 #. Primary footer action that starts streaming the selected capture device.
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/user/components/settings_utils/section_registry/NotificationsSections.ts:235
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:199
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:203
 msgid "Stream"
 msgstr "스트림"
 
@@ -30586,18 +30536,18 @@ msgstr "스트림이 따라가지 못하고 있어요"
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #. Short label in the user settings voice activity card. Keep it concise.
 #: src/features/user/components/profile/VoiceActivityCard.tsx:90
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:168
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:141
 #: src/features/voice/components/StreamWatchHoverCard.tsx:21
 msgid "Stream preview"
 msgstr "스트림 미리보기"
 
 #. Compact submenu label for changing the resolution and frame rate of an active stream.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:144
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:149
 msgid "Stream quality"
 msgstr "스트림 품질"
 
 #. Toolbar / menu button label in the screen-share picker. Opens the stream quality settings popover.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:220
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:224
 msgid "Stream settings"
 msgstr "스트림 설정"
 
@@ -30618,7 +30568,7 @@ msgid "Streaming"
 msgstr "스트리밍 중"
 
 #. Section header in the stream settings menu. Picks between Gaming / Screen share / Custom presets.
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:116
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:121
 msgid "Streaming mode"
 msgstr "스트리밍 모드"
 
@@ -30805,12 +30755,12 @@ msgid "Suspend"
 msgstr "일시 중단"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:192
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:165
 msgid "SVC"
 msgstr "SVC"
 
 #. Label for an advanced screen-share select. SVC is a WebRTC acronym and should stay uppercase.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:99
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:96
 msgid "SVC mode"
 msgstr "SVC 모드"
 
@@ -31071,8 +31021,8 @@ msgstr "{productName} 직원의 시스템 공지입니다. 여기에 답장할 �
 
 #. Audio device option label meaning the OS default audio input device.
 #. Footer summary fallback for the default capture-device audio input.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:252
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:132
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:256
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:137
 msgid "System default"
 msgstr "시스템 기본값"
 
@@ -31216,7 +31166,7 @@ msgid "Tap to add a note"
 msgstr "메모를 추가하려면 탭하세요"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:199
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:173
 msgid "Targets people by protected characteristics."
 msgstr "보호 특성별로 사람들을 타겟팅합니다."
 
@@ -31252,7 +31202,7 @@ msgid "Template URL"
 msgstr "템플릿 URL"
 
 #. Option label for an SVC mode select.
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:115
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:112
 msgid "Temporal layers"
 msgstr "시간 레이어"
 
@@ -31296,7 +31246,7 @@ msgid "Terms URL"
 msgstr "이용 약관 URL"
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:215
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:189
 msgid "Terrorism or violent extremism"
 msgstr "테러 또는 폭력적 극단주의"
 
@@ -31313,7 +31263,7 @@ msgstr "URL 미리 보기 및 렌더링된 임베드 테스트"
 #. Channel type chip label for a text channel.
 #. Option label for a WebRTC content hint select.
 #: src/features/channel/utils/ChannelUtils.tsx:51
-#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:159
+#: src/features/user/components/modals/tabs/advanced_settings_tab/AdvancedVideoControls.tsx:156
 msgid "Text"
 msgstr "텍스트"
 
@@ -31379,20 +31329,20 @@ msgid "Text to speech"
 msgstr "텍스트 음성 변환"
 
 #. Required-action modal carousel step title for starting inbound phone verification.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:314
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:413
 msgid "Text us from your phone"
 msgstr "휴대폰으로 문자 보내기"
 
 #. Feature label / section heading for the text-to-speech feature.
 #: src/features/i18n/utils/CommonMessageDescriptors.ts:414
 msgid "Text-to-speech"
-msgstr "Text-to-speech"
+msgstr "텍스트 음성 변환"
 
 #. Accessibility settings section for reading messages aloud.
 #: src/features/user/components/settings_utils/section_registry/AccessibilitySections.ts:333
 msgctxt "accessibility-settings-section"
 msgid "Text-to-speech"
-msgstr "Text-to-speech"
+msgstr "텍스트 음성 변환"
 
 #. Body of the TTS-unsupported modal. Mentions specific browsers; keep Chrome, Firefox, Edge, and Brave as literal proper nouns.
 #: src/features/voice/components/alerts/TtsUnsupportedModal.tsx:12
@@ -31443,14 +31393,24 @@ msgid "Thank you for helping keep {productName} safe. We'll review your report a
 msgstr "{productName}을(를) 안전하게 유지하는 데 도움을 주셔서 감사합니다. 최대한 빨리 신고 내용을 검토하겠습니다."
 
 #. Required-action form error for an invalid verification code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:370
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:469
 msgid "That code didn't work. Check it and try again."
 msgstr "코드가 올바르지 않습니다. 다시 확인하고 시도해 주세요."
 
 #. Required-action form error for an expired verification code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:374
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:473
 msgid "That code expired. Request a new code."
 msgstr "코드가 만료되었습니다. 새 코드를 요청해 주세요."
+
+#. Shown in the required-action modal when setting the check aside failed part way through leaving communities. Retrying is safe and continues from where it stopped. Names the button so the reader knows what to press.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:361
+msgid "That did not finish. Some communities may already have been left, and your account is still locked. Press Set this check aside again to finish."
+msgstr "완료되지 않았습니다. 일부 커뮤니티는 이미 나가졌을 수 있으며 계정은 여전히 잠겨 있습니다. 완료하려면 '이 확인 건너뛰기'를 다시 누르세요."
+
+#. Shown in the required-action modal when setting the check aside failed and the user was in no community that would have been left, so nothing can have been lost.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:356
+msgid "That did not go through. Nothing changed. Try again."
+msgstr "전송되지 않았습니다. 아무것도 변경되지 않았습니다. 다시 시도하세요."
 
 #: src/features/ui/components/form/ColorPickerField.tsx:301
 msgid "That doesn't look like a valid color. Try hex, rgb(), hsl(), or a CSS color name."
@@ -31461,7 +31421,7 @@ msgid "That doesn't look like a valid URL."
 msgstr "유효한 URL이 아닌 것 같아요."
 
 #. Required-action form error when a new email is already used by another account.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:394
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:493
 msgid "That email is already in use."
 msgstr "이미 사용 중인 이메일입니다."
 
@@ -31523,7 +31483,7 @@ msgid "The bot has been added."
 msgstr "봇이 추가되었습니다."
 
 #. Status shown when a device preview has not released the camera before the bounded handoff deadline.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:167
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:171
 msgid "The camera preview is still stopping. Try streaming again in a moment."
 msgstr "카메라 미리보기가 아직 중지 중입니다. 잠시 후 다시 스트리밍해 보세요."
 
@@ -31610,6 +31570,11 @@ msgstr "새로운 음성 채널은 <0>{channelLabel}</0>의 권한, 사용자 �
 msgid "The page you're looking for doesn't exist or has been moved."
 msgstr "찾으시는 페이지가 없거나 이동되었어요."
 
+#. Success toast after the phone check is set aside while an email requirement remains, so the modal stays open on the email step. Never tell someone they are done while a modal is still in front of them.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:346
+msgid "The phone check is set aside. One email step is left."
+msgstr "휴대폰 인증은 보류되었습니다. 이메일 인증 단계가 하나 남았습니다."
+
 #. OAuth authorize page error shown when the redirect_uri is not registered for this OAuth app.
 #: src/features/auth/components/pages/oauth_authorize_page/state/useAuthorizeFlow.ts:58
 msgid "The provided redirect_uri is not registered for this application."
@@ -31621,7 +31586,7 @@ msgid "The provided redirect_uri must use HTTP or HTTPS."
 msgstr "제공된 redirect_uri는 HTTP 또는 HTTPS를 사용해야 합니다."
 
 #. Body of a modal shown when a browser screen share track ends outside the app, for example from the browser sharing controls.
-#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:107
+#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:109
 msgctxt "screen-share"
 msgid "The screen share source stopped sending video, so your screen share was stopped."
 msgstr "화면 공유 소스가 더 이상 비디오를 보내지 않아 화면 공유가 중단되었습니다."
@@ -31875,7 +31840,7 @@ msgid "This card does not match your billing country, so it cannot be used for t
 msgstr "카드 청구지 국가가 일치하지 않아 현지 통화로 결제할 수 없습니다. 현지 카드를 사용하거나 다른 결제 수단을 선택하거나 {productName}으로 돌아가 표준 가격으로 전환하세요."
 
 #. Modal body shown when a category cannot accept another channel because the per-category limit is reached. Limit is interpolated.
-#: src/features/app/components/layout/ChannelListContent.tsx:78
+#: src/features/app/components/layout/ChannelListContent.tsx:79
 msgid "This category already contains the maximum of {maxChannelsPerCategory} channels."
 msgstr "이 카테고리에는 이미 최대 {maxChannelsPerCategory}개의 채널이 있습니다."
 
@@ -32221,6 +32186,11 @@ msgstr "비활성화됨"
 msgid "This is how messages appear"
 msgstr "메시지가 표시되는 방식입니다"
 
+#. Shown in the required-action modal when setting the check aside is refused, and when it reported success but the phone requirement is still in force. supportEmail is inserted by code, and the address is named in full because the support link may have scrolled out of view.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:351
+msgid "This is not available on your account right now. Email {supportEmail} and a person will review it."
+msgstr "이 기능은 현재 계정에서 사용할 수 없습니다. {supportEmail}으로 이메일을 보내주시면 담당자가 검토해 드리겠습니다."
+
 #: src/features/channel/components/ChannelLayout.tsx:45
 msgid "This is not the channel you're looking for."
 msgstr "찾으시는 채널이 아닌 것 같아요."
@@ -32251,6 +32221,11 @@ msgstr "두 번째 옵션에 대한 설명입니다"
 #: src/features/user/components/modals/tabs/component_gallery_tab/index.tsx:113
 msgid "This is the third option description"
 msgstr "세 번째 옵션 설명입니다"
+
+#. Required-action form error for landline, toll-free, premium, shared-cost, UAN, voicemail and pager lines. Do not name which line type the provider returned.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:549
+msgid "This isn't a mobile number, so it can't receive our text. Try a mobile number, or contact support if you think that's wrong."
+msgstr "이 번호는 휴대폰 번호가 아니라 문자를 받을 수 없습니다. 휴대폰 번호를 다시 입력하거나, 잘못된 경우 지원팀에 문의하세요."
 
 #. Extra file-too-large alert sentence shown when premium upload-limit upgrades are unavailable.
 #: src/features/messaging/components/alerts/FileSizeTooLargeModal.tsx:39
@@ -32309,7 +32284,7 @@ msgid "This member isn't connected to voice anymore."
 msgstr "이 멤버는 더 이상 음성 채팅에 연결되어 있지 않습니다."
 
 #. IAR modal: tooltip on the delete card when the reported message is already deleted.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:143
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:117
 msgid "This message has already been deleted."
 msgstr "이 메시지는 이미 삭제되었습니다."
 
@@ -32323,8 +32298,13 @@ msgstr "이 메시지는 더 이상 존재하지 않습니다."
 msgid "This nickname will only be visible in this community"
 msgstr "이 닉네임은 이 커뮤니티에서만 표시됩니다"
 
+#. Required-action form error when a number must use the inbound text-in challenge and the current step cannot start one. Do not say why the number was routed there.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:531
+msgid "This number is verified by texting us instead. Go back and start phone verification again to get the code and the number to text."
+msgstr "이 번호는 문자로 인증되었습니다. 코드를 받고 문자를 보낼 번호를 다시 받으려면 뒤로 가서 전화 인증을 다시 시작하세요."
+
 #. Required-action modal explanation for an inbound phone verification challenge.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:326
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:425
 msgid "This number needs text-in verification instead of an SMS from us."
 msgstr "이 번호는 SMS 대신 문자 인증이 필요합니다."
 
@@ -32349,17 +32329,17 @@ msgid "This participant was deafened by moderators"
 msgstr "이 참가자는 관리자에 의해 음소거되었습니다"
 
 #. Required-action form error when the backend rejects a phone number.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:410
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:509
 msgid "This phone number cannot be used. Try another mobile number or contact support."
 msgstr "이 전화번호는 사용할 수 없습니다. 다른 휴대폰 번호를 시도하거나 지원팀에 문의하세요."
 
 #. Required-action form error when the backend rejects a reused phone number.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:414
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:513
 msgid "This phone number has already been used. Try another number or contact support."
 msgstr "이 전화번호는 이미 사용 중입니다. 다른 번호를 시도하거나 지원팀에 문의하세요."
 
 #. Empty state in the screen-share picker shown to web users. Explains that this advanced picker requires the desktop app.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:132
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:136
 msgid "This picker is only available in the desktop app."
 msgstr "이 선택 도구는 데스크톱 앱에서만 사용할 수 있습니다."
 
@@ -32477,7 +32457,7 @@ msgid "This user has no roles in this community."
 msgstr "이 사용자는 이 커뮤니티에서 역할이 없습니다."
 
 #. IAR modal: tooltip on the ban card when the reported user is already banned.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:163
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:137
 msgid "This user is already banned from the community."
 msgstr "이 사용자는 이미 커뮤니티에서 차단되었습니다."
 
@@ -32506,7 +32486,7 @@ msgid "This verification session expired. Return to {productName} and start chec
 msgstr "인증 세션이 만료되었습니다. {productName}으로 돌아가서 다시 결제를 시작해 주세요."
 
 #. Required-action form error when an email-change ticket or proof is invalid or expired.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:382
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:481
 msgid "This verification session expired. Start again."
 msgstr "인증 세션이 만료되었습니다. 다시 시작해 주세요."
 
@@ -32542,11 +32522,6 @@ msgstr "즐겨찾기 관련 버튼 및 메뉴 등 모든 UI 요소가 숨겨집�
 #: src/features/auth/components/modals/BackupCodesRegenerateModal.tsx:88
 msgid "This will invalidate your existing backup codes and generate new ones."
 msgstr "기존 백업 코드는 무효화되고 새로운 코드가 생성됩니다."
-
-#. Body of the reschedule scheduled-message alert clarifying that the update modifies the scheduled message instead of sending it now.
-#: src/features/channel/components/channel_textarea/shared.ts:32
-msgid "This will modify the existing scheduled message rather than sending immediately."
-msgstr "예약 메시지를 즉시 보내지 않고 수정합니다."
 
 #. Warning text before notifying every member in the current channel.
 #: src/features/channel/components/MentionEveryonePopout.tsx:93
@@ -32605,17 +32580,17 @@ msgid "This will trust all external links and skip the warning for every domain.
 msgstr "모든 외부 링크를 신뢰하고 모든 도메인에 대한 경고를 건너뜁니다. 기존 신뢰 도메인은 교체됩니다. 보안 수준이 낮아집니다."
 
 #. Required-action modal body after the user sends an inbound phone verification text.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:358
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:457
 msgid "This window updates automatically after we receive your message."
 msgstr "메시지를 받으면 이 창이 자동으로 업데이트됩니다."
 
 #. IAR modal: rule description for a user report.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:179
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:153
 msgid "Threats, following across spaces, or unwanted contact."
 msgstr "위협, 다른 공간에서 따라다니기 또는 원치 않는 연락."
 
 #. IAR modal: rule-category label grouping harassment, hate, violence, terrorism, raids, and self-harm content.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:57
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:39
 msgid "Threats, harassment, or harm"
 msgstr "위협, 괴롭힘 또는 피해"
 
@@ -32738,9 +32713,7 @@ msgstr "시간 또는 관련성"
 msgid "Timestamps"
 msgstr "타임스탬프"
 
-#. Field label for the timezone picker in the schedule-message modal.
 #. Field label in profile settings for choosing the timezone used to show local time on the profile.
-#: src/features/messaging/components/modals/ScheduleMessageModal.tsx:27
 #: src/features/user/components/modals/tabs/my_profile_tab/TimezoneProfileSettings.tsx:19
 msgid "Timezone"
 msgstr "시간대"
@@ -32922,7 +32895,7 @@ msgid "Tone-map HDR images to standard range, reducing peak brightness."
 msgstr "HDR 이미지를 표준 범위로 톤 매핑하여 최고 밝기를 줄입니다."
 
 #. Required-action error shown for rate limits.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:386
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:485
 msgid "Too many attempts. Wait a bit, then try again."
 msgstr "시도 횟수가 너무 많습니다. 잠시 기다린 후 다시 시도해 주세요."
 
@@ -33304,7 +33277,7 @@ msgid "Turn off anything you're not comfortable with. Some features may stop wor
 msgstr "불편한 기능은 비활성화할 수 있습니다. 일부 기능이 작동을 멈출 수 있습니다."
 
 #. Error modal body shown after a native screen-share audio route fails to start.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:175
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:179
 msgid "Turn off audio sharing for this source or try again in a moment."
 msgstr "이 소스의 오디오 공유를 끄거나 잠시 후 다시 시도하세요."
 
@@ -33679,7 +33652,7 @@ msgid "Undeafen yourself"
 msgstr "음소거 해제"
 
 #. IAR modal: child-safety rule label (user reports).
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:102
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:84
 msgid "Underage or child-safety concern"
 msgstr "미성년자 또는 아동 안전 관련 우려"
 
@@ -33770,7 +33743,7 @@ msgid "Unfurl"
 msgstr "미리 보기"
 
 #. Settings section label for the embed debugger URL input.
-#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:231
+#: src/features/user/components/modals/tabs/EmbedDebuggerTab.tsx:230
 #: src/features/user/components/settings_utils/section_registry/GeneralSettingsSections.ts:62
 msgid "Unfurl debugger"
 msgstr "임베드 디버거 URL 입력란 설정 섹션 레이블"
@@ -33789,8 +33762,8 @@ msgstr "범용 대체 코덱. 화질은 가장 낮지만, 모든 환경에서 �
 #. Fallback version label when the installed desktop version is unknown.
 #. Generic fallback label when a more specific value is unavailable.
 #. Short label in the invite list item. Keep it concise.
-#: src/features/emoji/components/emojis/EmojiListItem.tsx:585
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:755
+#: src/features/emoji/components/emojis/EmojiListItem.tsx:584
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:751
 #: src/features/invite/components/InviteListItem.tsx:34
 #: src/features/moderation/components/modals/BanDetailsModal.tsx:114
 #: src/features/updater/commands/UpdaterModalCommands.tsx:144
@@ -34057,7 +34030,7 @@ msgid "Unmute DMs"
 msgstr "DM 음소거 해제"
 
 #. Action label that unmutes notifications for the favourites pseudo-guild.
-#: src/features/i18n/utils/CommonMessageDescriptors.ts:691
+#: src/features/i18n/utils/CommonMessageDescriptors.ts:687
 msgid "Unmute favourites"
 msgstr "즐겨찾기 알림 켜기"
 
@@ -34097,8 +34070,8 @@ msgstr "이름 없는 그룹"
 
 #. Fallback label for an audio input device whose name is not reported by the OS.
 #. Footer summary fallback for an audio input without a reported name.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:256
-#: src/features/voice/components/StreamSettingsMenuContent.tsx:136
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:260
+#: src/features/voice/components/StreamSettingsMenuContent.tsx:141
 msgid "Unnamed input"
 msgstr "이름 없는 입력"
 
@@ -34292,12 +34265,12 @@ msgid "Unverified email"
 msgstr "인증되지 않은 이메일"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:227
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:201
 msgid "Unwanted conduct or mature content in the wrong place."
 msgstr "부적절한 행동 또는 부적절한 장소에 있는 성인용 콘텐츠입니다."
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:235
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:209
 msgid "Unwanted mature conduct, comments, or requests."
 msgstr "원치 않는 성인용 행동, 댓글 또는 요청."
 
@@ -34306,14 +34279,9 @@ msgid "Up to {DISCOVERY_MAX_TAGS} tags help people find your community. They sho
 msgstr "최대 {DISCOVERY_MAX_TAGS}개의 태그로 커뮤니티를 더 쉽게 찾을 수 있습니다. 이 태그는 디스커버리 검색에 표시됩니다."
 
 #. Feature comparison table value label. Shown in the restricted or stock column for a text-valued perk. Format includes a resolution token (4K) and a framerate token that should not be translated.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:87
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:83
 msgid "Up to 4K/60fps"
 msgstr "최대 4K/60fps"
-
-#. Confirm button label on the reschedule scheduled-message alert.
-#: src/features/channel/components/channel_textarea/shared.ts:28
-msgid "Update"
-msgstr "업데이트"
 
 #. Message placeholder shown when the app cannot render a newer message type.
 #: src/features/channel/components/UnknownMessage.tsx:23
@@ -34564,7 +34532,7 @@ msgid "Upload new emoji and stickers, and manage your own creations."
 msgstr "새로운 이모티콘과 스티커를 업로드하고 직접 만든 콘텐츠를 관리하세요."
 
 #. Description for the screen-share preview toggle in the informational modal.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:322
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:326
 msgid "Upload preview frames for screen shares."
 msgstr "화면 공유 미리보기 프레임을 업로드합니다."
 
@@ -34752,17 +34720,17 @@ msgid "Use an authenticator app to generate codes for two-factor authentication"
 msgstr "인증 앱을 사용하여 2단계 인증 코드를 생성합니다"
 
 #. Required-action form error when the new email matches the current account email.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:398
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:497
 msgid "Use an email that is different from your current one."
 msgstr "현재 이메일과 다른 이메일을 사용하세요."
 
 #. Required-action modal body for entering a new email address.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:280
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:379
 msgid "Use an email you can open. We will send a code there."
 msgstr "열 수 있는 이메일을 사용해 주세요. 인증 코드를 보내드립니다."
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:63
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:59
 msgid "Use animated emojis"
 msgstr "움직이는 이모티콘 사용"
 
@@ -34909,7 +34877,7 @@ msgid "Use native title bar"
 msgstr "기본 제목 표시줄 사용"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:387
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:361
 msgid "Use only if it clearly breaks {productName}'s rules and doesn't fit above."
 msgstr "{productName}의 규칙을 명확히 위반하고 위에 해당하지 않는 경우에만 사용하세요."
 
@@ -35065,7 +35033,7 @@ msgid "User"
 msgstr "사용자"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:251
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:225
 msgid "User appears underage, or is involved in grooming or child exploitation."
 msgstr "사용자가 미성년자로 보이거나, 그루밍 또는 아동 착취와 관련되어 있습니다."
 
@@ -35637,12 +35605,12 @@ msgid "Video call unavailable"
 msgstr "영상 통화 이용 불가"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:82
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:80
 msgid "Video codec"
 msgstr "비디오 코덱"
 
 #. Settings search entry description. One-line summary of what the settings search entry controls.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:86
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:84
 msgid "Video codec for screen sharing"
 msgstr "화면 공유용 비디오 코덱"
 
@@ -35676,7 +35644,7 @@ msgid "Video progress"
 msgstr "동영상 진행률"
 
 #. Feature comparison table perk label. Shown as the row name comparing restricted vs stock limits.
-#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:71
+#: src/features/app/components/dialogs/components/FeatureComparisonTable.tsx:67
 msgid "Video quality"
 msgstr "동영상 화질"
 
@@ -35959,12 +35927,12 @@ msgid "Violation category"
 msgstr "위반 카테고리"
 
 #. IAR modal: rule description.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:347
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:321
 msgid "Violation is in the user's profile, not a specific message."
 msgstr "위반 사항이 특정 메시지가 아닌 사용자 프로필에 있습니다."
 
 #. IAR modal: rule label.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:207
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:181
 msgid "Violence or violent threats"
 msgstr "폭력 또는 폭력 위협"
 
@@ -35977,11 +35945,6 @@ msgstr "폭력적이거나 잔인한 콘텐츠"
 #: src/features/guild/utils/guild_tabs/GuildAuditLogTabUtils.ts:146
 msgid "VIP voice"
 msgstr "VIP 음성"
-
-#. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:143
-msgid "Virtual microphone"
-msgstr "가상 마이크"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
 #: src/features/user/components/settings_utils/section_registry/AccessibilitySections.ts:39
@@ -36025,7 +35988,7 @@ msgid "Visionary badge ID"
 msgstr "Visionary 뱃지 ID"
 
 #. Short label in the user profile badges popout. Keep it concise. Preserve {visionaryIdLabel}; it is inserted by code.
-#: src/features/user/components/popouts/UserProfileBadges.tsx:61
+#: src/features/user/components/popouts/UserProfileBadges.tsx:56
 msgid "Visionary ID {visionaryIdLabel}"
 msgstr "비저너리 ID {visionaryIdLabel}"
 
@@ -36305,7 +36268,7 @@ msgid "Volume control"
 msgstr "볼륨 조절"
 
 #. Settings search synonym. Used to match this term when the user types it in the settings search bar.
-#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:42
+#: src/features/user/components/settings_utils/search_index/VoiceVideoIndex.ts:40
 msgid "Volume sliders"
 msgstr "볼륨 슬라이더"
 
@@ -36324,7 +36287,7 @@ msgid "Wait between messages. \"{bypassSlowmodePermissionLabel}\" can bypass it.
 msgstr "메시지 사이에 대기합니다. \"{bypassSlowmodePermissionLabel}\" 권한이 있으면 이 제한을 우회할 수 있습니다."
 
 #. Required-action modal carousel step title after the user sends an inbound phone verification text.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:354
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:453
 msgid "Wait here"
 msgstr "잠시만 기다려 주세요"
 
@@ -36471,6 +36434,16 @@ msgstr "테마를 읽을 수 없습니다. 파일이 손상되었거나 유효�
 msgid "We couldn't remove that account. Try again."
 msgstr "계정을 삭제할 수 없습니다. 다시 시도해 주세요."
 
+#. Required-action form error for phone attempts blocked by a fraud signal. Deliberately non-specific. Never name the signal, the score or the threshold.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:555
+msgid "We couldn't verify this number automatically. Contact support and a person will review your account."
+msgstr "이 번호는 자동으로 인증할 수 없습니다. 지원팀에 문의하시면 담당자가 계정을 검토해 드립니다."
+
+#. Required-action form error when the phone number's country is on the SMS send ban list. Must not imply the number itself is invalid.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:525
+msgid "We don't send verification texts to this country. Try a mobile number from another country, or contact support."
+msgstr "이 국가로는 인증 문자를 보내지 않습니다. 다른 국가의 휴대폰 번호를 사용하거나 고객 지원팀에 문의하세요."
+
 #. Modal body for existing-subscription block. Directs the user to the billing portal and addresses the just-paid race case. Keep plain and reassuring.
 #: src/features/app/components/dialogs/components/plutonium/hooks/useCheckoutActions.tsx:130
 msgid "We found an existing {premiumProductFullName} subscription for this account. Manage it in the secure billing portal to update payment details or check renewal status. If you just paid, wait a minute and reopen this page."
@@ -36513,7 +36486,7 @@ msgid "We will prefill {prefillEmail} once browser sign-in opens."
 msgstr "브라우저 로그인 창이 열리면 {prefillEmail}이(가) 자동으로 입력됩니다."
 
 #. Required-action modal body for entering a phone number.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:297
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:396
 msgid "We will send an SMS code when available."
 msgstr "가능한 경우 SMS 코드를 보내드립니다."
 
@@ -36798,13 +36771,8 @@ msgstr "{username}님, 환영합니다! 여기서 새로운 대화를 시작해 
 msgid "Welcome, {username}. We're happy to have you here."
 msgstr "{username}님, 환영합니다! 함께하게 되어 기쁩니다."
 
-#. IAR modal: accessible label (aria-label only — not shown visually) for the primary-path radio group on step 1.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:36
-msgid "What do you need?"
-msgstr "무엇을 도와드릴까요?"
-
 #. IAR modal: category-step title for the platform-report path. User picks a broad area before drilling in.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:49
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:31
 msgid "What kind of rule was broken?"
 msgstr "어떤 규칙을 위반했나요?"
 
@@ -36866,17 +36834,17 @@ msgid "When posted as links to chat"
 msgstr "채팅방에 링크로 공유할 때"
 
 #. Explanation of screen-share preview uploads in a group DM call. productName is the app name; JPEG is an image format name.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:286
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:290
 msgid "When previews are enabled, {productName} uploads occasional JPEG frames from your screen share so other people in this group DM can see a thumbnail before they watch."
 msgstr "미리보기 기능이 활성화되면 {productName}은 화면 공유 중 가끔씩 JPEG 형식의 프레임을 업로드하여 이 그룹 DM에 있는 다른 사람들이 미리보기를 볼 수 있도록 합니다."
 
 #. Explanation of screen-share preview uploads in a guild voice channel. productName is the app name; JPEG is an image format name.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:280
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:284
 msgid "When previews are enabled, {productName} uploads occasional JPEG frames from your screen share so people with permission to connect to this voice channel can see a thumbnail before they watch."
 msgstr "미리보기 기능이 활성화되면 {productName}은 화면 공유에서 가끔씩 JPEG 형식의 이미지를 업로드하여 이 음성 채널에 접속할 권한이 있는 사용자가 미리보기를 볼 수 있도록 합니다."
 
 #. Explanation of screen-share preview uploads in a one-to-one DM call. productName is the app name; JPEG is an image format name.
-#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:292
+#: src/features/voice/components/modals/ScreenSharePickerModal.tsx:296
 msgid "When previews are enabled, {productName} uploads occasional JPEG frames from your screen share so the other person in this DM can see a thumbnail before they watch."
 msgstr "미리보기 기능이 활성화되면 {productName}은 화면 공유 중 가끔씩 JPEG 형식의 프레임을 업로드하여 이 개인 메시지의 상대방이 미리보기를 볼 수 있도록 합니다."
 
@@ -36911,7 +36879,7 @@ msgid "Which conversations"
 msgstr "대화 선택"
 
 #. IAR modal: reason-step title for the platform-report path after a category has been picked.
-#: src/features/moderation/components/report_modal/IARModalCopy.ts:53
+#: src/features/moderation/components/report_modal/IARModalCopy.ts:35
 msgid "Which rule was broken?"
 msgstr "어떤 규칙을 위반했나요?"
 
@@ -37281,6 +37249,11 @@ msgstr "언제든지 다시 로그인할 수 있습니다."
 #: src/features/invite/utils/InviteMessageDescriptors.ts:47
 msgid "You can still create an account or sign in. If invites are re-enabled later, you can use this same link to join."
 msgstr "계정을 만들거나 로그인할 수 있습니다. 나중에 초대 기능이 다시 활성화되면 이 링크로 참여할 수 있습니다."
+
+#. Last line of the set-aside confirmation in the required-action modal. supportEmail is inserted by code. The self-serve route never closes the support route.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:326
+msgid "You can still email {supportEmail} for a human review at any time."
+msgstr "언제든지 {supportEmail}로 문의하여 직접 검토를 요청하실 수 있습니다."
 
 #: src/features/channel/components/pickers/gif/FavoriteGifFirstTimePromptModal.tsx:62
 msgid "You can store starred GIFs as URL-only favorites or upload them to your saved media. Pick the one that fits how you use them. You can change it any time in {mediaSettingsPath}."
@@ -37726,6 +37699,11 @@ msgstr "이 커뮤니티에서 메시지를 보내려면 이메일 인증이 필
 msgid "You or someone you're adding already has the maximum number of group DMs open. Leave one and try again."
 msgstr "회원님 또는 추가하려는 상대방이 이미 최대 그룹 DM 수를 열었습니다. 그룹 DM 중 하나를 나가고 다시 시도해 주세요."
 
+#. Confirmation line in the required-action modal explaining that communities the user owns are kept rather than left. ownedNames is a comma-separated list inserted by code.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:316
+msgid "You stay in {ownedNames}. Owners cannot leave their own community."
+msgstr "{ownedNames} 커뮤니티에 계속 계십니다. 소유자는 자신의 커뮤니티를 나갈 수 없습니다."
+
 #. Voice chat status tooltip for the current user. A moderator deafened them so they cannot hear voice chat.
 #: src/features/voice/utils/VoiceMessageDescriptors.ts:61
 msgid "You were deafened by moderators"
@@ -37736,9 +37714,24 @@ msgstr "관리자에 의해 음소거되었습니다"
 msgid "You will be taken to {redirectHostname} after authorizing."
 msgstr "승인 후 {redirectHostname}으로 이동합니다."
 
+#. Hint under the set-aside button in the required-action modal when the user is in communities that trigger the check. count is inserted by code.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:290
+msgid "You will leave {count, plural, one {# community} other {# communities}} that this check applies to, and your account works normally again."
+msgstr "이 검사가 적용되는 커뮤니티 {count, plural, one {#개} other {#개}}를 나가게 되며, 계정은 정상적으로 다시 작동합니다."
+
+#. Confirmation line in the required-action modal, shown only when the user is in communities that trigger the check. guildNames is a comma-separated list inserted by code. Both reassurances answer fears people actually have.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:311
+msgid "You will leave {guildNames}. Nothing you posted is deleted, and you can join again later."
+msgstr "{guildNames}을(를) 나가게 됩니다. 게시한 내용은 삭제되지 않으며 나중에 다시 참여할 수 있습니다."
+
 #: src/features/auth/components/modals/AccountDeleteModal.tsx:59
 msgid "You will not be able to delete your sent messages after your account is deleted"
 msgstr "계정 삭제 후에는 보낸 메시지를 삭제할 수 없습니다"
+
+#. Confirmation line in the required-action modal when an email requirement remains alongside the phone check, so the modal stays open afterwards.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:321
+msgid "You will still need to finish the email step."
+msgstr "이메일 단계를 완료해야 합니다."
 
 #: src/features/app/components/floating/UserAreaPopout.tsx:94
 #: src/features/user/components/modals/StatusChangeBottomSheet.tsx:40
@@ -38020,9 +38013,19 @@ msgstr "{productName} 세션이 만료되었습니다. 이 애플리케이션의
 msgid "Your account"
 msgstr "내 계정"
 
+#. First line of the set-aside confirmation in the required-action modal. Always shown. Says can rather than will, because whether the check returns depends on account age and instance settings the user cannot see.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:305
+msgid "Your account goes back to normal right away and you will not need a phone number now. This is not a permanent exemption. Joining a large or public community can bring this check back."
+msgstr "계정이 즉시 정상으로 돌아가며 지금은 전화번호가 필요하지 않습니다. 이는 영구적인 면제가 아닙니다. 크거나 공개된 커뮤니티에 참여하면 이 확인 절차가 다시 나타날 수 있습니다."
+
 #: src/features/connection/components/pages/ConnectionCallbackPage.tsx:29
 msgid "Your account has been linked successfully. You can now close this tab and return to the app."
 msgstr "계정이 성공적으로 연결되었습니다. 이 탭을 닫고 앱으로 돌아가세요."
+
+#. Success toast after the phone check is set aside and no verification steps remain. Deliberately count-free, because any communities that were left already disappear from the sidebar.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:341
+msgid "Your account is back to normal."
+msgstr "계정이 정상으로 돌아왔습니다."
 
 #: src/features/app/components/dialogs/components/UnclaimedAccountAlert.tsx:26
 msgid "Your account is not yet claimed. Without an email and password, you won't be able to sign in from other devices and you could lose access to your account. Claim your account now to secure it."
@@ -38040,6 +38043,11 @@ msgstr "계정 요청이 승인 대기 중입니다. 관리자가 승인한 후 
 #: src/features/auth/components/modals/SudoVerificationModal.tsx:180
 msgid "Your account requires multi-factor authentication, but no supported methods are set up on this device. Sign in on a device with your authenticator app or security key, or contact support."
 msgstr "계정에 다단계 인증이 필요하지만, 이 기기에는 지원되는 방법이 설정되어 있지 않습니다. 인증 앱 또는 보안 키가 있는 기기에서 로그인하거나 지원팀에 문의하세요."
+
+#. Hint under the set-aside button in the required-action modal when the user is in no community that triggers the check. This is the common case. Do not phrase it as undoing a join.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:284
+msgid "Your account works normally again straight away and nothing is removed. We can ask for this check again later."
+msgstr "계정이 즉시 정상적으로 복구되며 아무것도 삭제되지 않습니다. 나중에 이 확인을 다시 요청할 수 있습니다."
 
 #. Modal body shown when the safety system blocks the requested action. Keep plain and calm; offer support path.
 #: src/features/auth/components/ContentBlockedHandler.tsx:14
@@ -38062,6 +38070,11 @@ msgstr "카드 정보를 확인하여 현지 가격을 적용하고 있습니다
 #: src/features/premium/components/pages/PremiumCallbackPage.tsx:183
 msgid "Your card is eligible. Redirecting you to the payment page now."
 msgstr "카드 사용이 가능합니다. 지금 결제 페이지로 이동합니다."
+
+#. Required-action form error when the carrier lookup says the number does not exist. Leaves room for the lookup to be wrong.
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:543
+msgid "Your carrier says this number isn't in service. Check it and try again, or contact support if it's correct."
+msgstr "이 번호는 서비스되지 않는다고 이동통신사에서 알려왔습니다. 번호를 확인하고 다시 시도하거나, 번호가 정확하다면 고객 지원팀에 문의하세요."
 
 #: src/features/auth/flow/HandoffCodeDisplay.tsx:128
 msgid "Your code"
@@ -38186,11 +38199,6 @@ msgid "Your last purchase is outside the refund window. Contact support for bill
 msgstr "마지막 구매는 환불 기간이 지났습니다. 결제 관련 문제는 지원팀에 문의하세요."
 
 #. Label in the message queue state.
-#: src/features/messaging/state/MessageQueue.tsx:77
-msgid "Your message could not be delivered because it contains mature emoji or stickers that are not allowed in this context."
-msgstr "성인용 이모티콘 또는 스티커가 포함되어 있어 메시지를 보낼 수 없습니다."
-
-#. Label in the message queue state.
 #: src/features/messaging/state/MessageQueue.tsx:72
 msgid "Your message could not be delivered because it was flagged by our safety systems. If you believe this is a mistake, please contact support."
 msgstr "회원님의 메시지가 안전 시스템에 의해 차단되어 전송되지 못했습니다. 오류라고 생각되시면 고객지원팀에 문의해주세요."
@@ -38241,7 +38249,7 @@ msgid "Your new nickname, or leave blank to reset it."
 msgstr "새로운 닉네임입니다. 비워두면 초기화됩니다."
 
 #. Required-action modal privacy note for phone verification. limit and duration are inserted by code.
-#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:301
+#: src/features/auth/components/modals/required_action/RequiredActionDescriptors.ts:400
 msgid "Your number is not linked to your account. We keep only an encrypted marker, with no user ID, for at most {limit} verifications in about {duration} days."
 msgstr "회원님의 전화번호는 계정에 연결되어 있지 않습니다. 사용자 ID 없이 암호화된 마커만 보관하며, 약 {duration}일 동안 최대 {limit}회 인증에 사용됩니다."
 
@@ -38294,7 +38302,7 @@ msgid "Your registration needs an extra anti-spam check before you can continue.
 msgstr "계속하려면 추가 스팸 방지 확인이 필요합니다."
 
 #. Body of a modal shown when the video codec the browser negotiated for an active screen share is outside the codecs the app allows and no allowed codec could be published, which forces the share to stop.
-#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:113
+#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:115
 msgctxt "screen-share"
 msgid "Your screen share could not be published with a compatible video codec, so it was stopped. Try sharing again."
 msgstr "호환되는 비디오 코덱으로 화면 공유를 게시할 수 없어 중지되었습니다. 다시 공유해 보세요."
@@ -38378,7 +38386,7 @@ msgid "Your vanity URL has been set to {inviteEndpoint}/{vanitySlug}"
 msgstr "맞춤 URL이 {inviteEndpoint}/{vanitySlug}(으)로 설정되었습니다"
 
 #. Body of a modal shown when the local video encoder produces no frames for an active screen share, which forces the share to stop.
-#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:120
+#: src/features/voice/engine/v2/VoiceEngineV2AppScreenShareExecutionAdapter.tsx:122
 msgctxt "screen-share"
 msgid "Your video encoder stopped encoding frames, so your screen share was stopped. Try sharing again."
 msgstr "동영상 인코더에서 프레임을 더 이상 인코딩하지 않아 화면 공유가 중지되었습니다. 다시 공유해 보세요."

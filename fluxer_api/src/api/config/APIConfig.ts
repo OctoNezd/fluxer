@@ -153,7 +153,6 @@ export interface APIConfig {
 			reports: string;
 			harvests: string;
 			downloads: string;
-			static: string;
 		};
 	};
 	s3Downloads: ResolvedDownloadsProvider;
@@ -280,10 +279,6 @@ export interface APIConfig {
 			email?: string;
 		};
 		bluesky: BlueskyOAuthConfig;
-	};
-	cookie: {
-		domain: string;
-		secure: boolean;
 	};
 	klipy: {
 		apiKey?: string;

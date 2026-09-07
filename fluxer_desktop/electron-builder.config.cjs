@@ -30,7 +30,7 @@ const isWindowsBuild = process.argv.includes('--win');
 const targetPlatform = isLinuxBuild ? 'linux' : isMacBuild ? 'darwin' : isWindowsBuild ? 'win32' : process.platform;
 const metadataName = isLinuxBuild ? linuxPackageName : packageName;
 const supportedTargetArchs = ['x64', 'arm64'];
-const supportedMacTargetArchs = [...supportedTargetArchs, 'universal'];
+const supportedMacTargetArchs = supportedTargetArchs;
 const electronArch = process.env.ELECTRON_ARCH;
 const cliTargetArch = supportedMacTargetArchs.find((arch) => process.argv.includes(`--${arch}`)) || null;
 const targetNativeArch = electronArch || cliTargetArch;
@@ -45,6 +45,7 @@ if (targetNativeArch === 'universal' && targetPlatform !== 'darwin') {
 
 const targetArchs = electronArch && electronArch !== 'universal' ? [electronArch] : supportedTargetArchs;
 const macTargetArchs = targetNativeArch ? [targetNativeArch] : supportedTargetArchs;
+const macSigningEnvironmentProvided = Boolean(process.env.CSC_KEYCHAIN || process.env.CSC_LINK || process.env.CSC_NAME);
 const winGameCaptureTargetArchs =
 	targetPlatform === 'win32' && targetNativeArch ? [targetNativeArch] : supportedTargetArchs;
 const winTargets = [
@@ -1387,22 +1388,20 @@ module.exports = {
 	},
 	mac: {
 		category: 'public.app-category.social-networking',
-		universal: {
-			x64ArchFiles: '**/@fluxer/**/*.node',
-		},
 		minimumSystemVersion: macOSMinimumSystemVersion,
 		icon: `build_resources/${iconDir}/_compiled/AppIcon.icns`,
 		darkModeSupport: true,
-		// notarize: true,
 		notarize: false,
 		sign: {
-			identity: '-',
-			hardenedRuntime: true,
-			// provisioningProfile,
-			// entitlements: isCanary
-			// 	? 'build_resources/entitlements.mac.canary.plist'
-			// 	: 'build_resources/entitlements.mac.stable.plist',
-			entitlementsInherit: 'build_resources/entitlements.mac.inherit.plist',
+			...(macSigningEnvironmentProvided
+				? {
+						hardenedRuntime: true,
+						entitlements: 'build_resources/entitlements.mac.inherit.plist',
+						entitlementsInherit: 'build_resources/entitlements.mac.inherit.plist',
+					}
+				: {
+						identity: '-',
+					}),
 		},
 		target: [
 			{

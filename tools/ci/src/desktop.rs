@@ -150,10 +150,10 @@ const PLATFORMS: &[Platform] = &[
     },
     Platform {
         platform: "macos",
-        arch: MACOS_UNIVERSAL_ARCH,
+        arch: "arm64",
         desktop_variant: DEFAULT_DESKTOP_VARIANT,
         os: "fluxer-desktop-macos-arm64",
-        electron_arch: MACOS_UNIVERSAL_ARCH,
+        electron_arch: "arm64",
     },
     Platform {
         platform: "linux",

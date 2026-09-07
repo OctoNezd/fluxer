@@ -152,7 +152,7 @@ const PLATFORMS: &[Platform] = &[
         platform: "macos",
         arch: "arm64",
         desktop_variant: DEFAULT_DESKTOP_VARIANT,
-        os: "fluxer-desktop-macos-arm64",
+        os: "macos-26",
         electron_arch: "arm64",
     },
     Platform {
@@ -1499,7 +1499,9 @@ impl DesktopBuildPlatform {
 }
 
 fn build_app_step(platform: DesktopBuildPlatform) -> Result<()> {
-    let macos_keychain = if matches!(platform, DesktopBuildPlatform::Macos) {
+    let macos_keychain = if matches!(platform, DesktopBuildPlatform::Macos)
+        && env_bool("DESKTOP_MACOS_SIGNING")
+    {
         Some(validate_macos_signing_env()?)
     } else {
         None
